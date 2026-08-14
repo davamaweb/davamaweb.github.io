@@ -10516,6 +10516,9 @@ button {
 }
 
 @media (max-width: 767px) {
+  .ml-0 {
+    margin-left: 0;
+  }
   .contact-map {
     min-height: 1080px;
   }

@@ -1,0 +1,1694 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Před a po | DAVAMA Úklidové služby</title>
+
+    <meta
+      name="description"
+      content="Nejlíp mluví výsledek. Prohlédněte si skutečné proměny před a po úklidu DAVAMA v Chlumci nad Cidlinou a okolí."
+    />
+
+    <!-- TVŮJ HLAVNÍ CSS -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- =====================================================
+         CSS POUZE PRO PŘED / PO
+    ====================================================== -->
+
+    <style>
+      /* =========================================================
+         BEFORE / AFTER PAGE
+      ========================================================= */
+
+      .before-after-page {
+        background: var(--color-background);
+      }
+
+      /* =========================================================
+         GALLERY SECTION
+      ========================================================= */
+
+      .transformations {
+        position: relative;
+
+        padding-top: clamp(110px, 10vw, 170px);
+
+        padding-bottom: clamp(110px, 10vw, 170px);
+
+        overflow: hidden;
+
+        background:
+          radial-gradient(
+            circle at 88% 10%,
+            rgba(184, 239, 0, 0.07),
+            transparent 25%
+          ),
+          radial-gradient(
+            circle at 5% 82%,
+            rgba(184, 239, 0, 0.035),
+            transparent 22%
+          ),
+          var(--color-background);
+
+        isolation: isolate;
+      }
+
+      .transformations__grid {
+        position: relative;
+
+        z-index: 3;
+
+        margin-top: clamp(62px, 7vw, 100px);
+
+        display: grid;
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 28px;
+      }
+
+      /* =========================================================
+         CARD
+      ========================================================= */
+
+      .compare-card {
+        position: relative;
+
+        border: 1px solid var(--color-border);
+
+        border-radius: 22px;
+
+        background: rgba(249, 249, 246, 0.78);
+
+        overflow: hidden;
+
+        box-shadow: 0 20px 60px rgba(18, 24, 17, 0.055);
+
+        transition:
+          transform 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+          box-shadow 0.5s ease,
+          border-color 0.4s ease;
+      }
+
+      .compare-card__top {
+        min-height: 67px;
+
+        padding: 0 20px;
+
+        display: flex;
+        align-items: center;
+
+        gap: 14px;
+
+        border-bottom: 1px solid var(--color-border);
+      }
+
+      .compare-card__index {
+        width: 34px;
+        height: 34px;
+
+        flex: 0 0 34px;
+
+        display: grid;
+        place-items: center;
+
+        border-radius: 50%;
+
+        background: rgba(184, 239, 0, 0.13);
+
+        color: #759900;
+
+        font-size: 9px;
+
+        font-weight: 850;
+
+        letter-spacing: 0.05em;
+
+        transition:
+          transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+          background 0.4s ease;
+      }
+
+      .compare-card__type {
+        font-size: 11px;
+
+        font-weight: 800;
+
+        letter-spacing: 0.08em;
+
+        text-transform: uppercase;
+      }
+
+      .compare-card__hint {
+        margin-left: auto;
+
+        color: var(--color-muted);
+
+        font-size: 8px;
+
+        font-weight: 750;
+
+        letter-spacing: 0.1em;
+
+        text-transform: uppercase;
+      }
+
+      /* =========================================================
+         COMPARE
+      ========================================================= */
+
+      .compare {
+        --position: 50%;
+
+        position: relative;
+
+        width: 100%;
+
+        aspect-ratio: 1.18 / 1;
+
+        overflow: hidden;
+
+        cursor: ew-resize;
+
+        background: #d9d9d4;
+
+        touch-action: pan-y;
+      }
+
+      .compare__image {
+        position: absolute;
+
+        inset: 0;
+
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+
+        user-select: none;
+
+        pointer-events: none;
+      }
+
+      /* AFTER лежить знизу */
+
+      .compare__image--after {
+        z-index: 1;
+      }
+
+      /* BEFORE обрізається */
+
+      .compare__before {
+        position: absolute;
+
+        inset: 0;
+
+        z-index: 2;
+
+        width: var(--position);
+
+        overflow: hidden;
+      }
+
+      .compare__before .compare__image {
+        width: var(--compare-width, 700px);
+
+        max-width: none;
+      }
+
+      /* =========================================================
+         BEFORE / AFTER LABELS
+      ========================================================= */
+
+      .compare__label {
+        position: absolute;
+
+        top: 18px;
+
+        z-index: 5;
+
+        min-width: 58px;
+        height: 30px;
+
+        padding: 0 12px;
+
+        display: inline-flex;
+
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 999px;
+
+        font-size: 9px;
+
+        font-weight: 850;
+
+        letter-spacing: 0.12em;
+
+        text-transform: uppercase;
+
+        backdrop-filter: blur(12px);
+
+        -webkit-backdrop-filter: blur(12px);
+      }
+
+      .compare__label--before {
+        left: 18px;
+
+        background: rgba(8, 13, 16, 0.72);
+
+        color: #fff;
+      }
+
+      .compare__label--after {
+        right: 18px;
+
+        background: var(--color-accent);
+
+        color: #080d10;
+      }
+
+      /* =========================================================
+         DIVIDER
+      ========================================================= */
+
+      .compare__divider {
+        position: absolute;
+
+        left: var(--position);
+
+        top: 0;
+        bottom: 0;
+
+        z-index: 6;
+
+        width: 1px;
+
+        background: rgba(255, 255, 255, 0.9);
+
+        transform: translateX(-50%);
+
+        pointer-events: none;
+
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.12);
+      }
+
+      .compare__handle {
+        position: absolute;
+
+        left: 50%;
+        top: 50%;
+
+        width: 52px;
+        height: 52px;
+
+        display: grid;
+        place-items: center;
+
+        border-radius: 50%;
+
+        transform: translate(-50%, -50%);
+
+        background: var(--color-accent);
+
+        border: 1px solid rgba(255, 255, 255, 0.6);
+
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.16);
+
+        transition:
+          transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+          box-shadow 0.4s ease;
+      }
+
+      .compare__handle::before {
+        content: "";
+
+        position: absolute;
+
+        inset: -8px;
+
+        border-radius: 50%;
+
+        border: 1px solid rgba(184, 239, 0, 0.3);
+
+        animation: compareHandlePulse 2.8s ease-out infinite;
+      }
+
+      .compare__handle svg {
+        width: 26px;
+        height: 19px;
+
+        fill: none;
+
+        stroke: #080d10;
+
+        stroke-width: 1.1;
+
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      /* invisible input */
+
+      .compare__range {
+        position: absolute;
+
+        inset: 0;
+
+        z-index: 10;
+
+        width: 100%;
+        height: 100%;
+
+        margin: 0;
+
+        opacity: 0;
+
+        cursor: ew-resize;
+      }
+
+      /* =========================================================
+         CARD BOTTOM
+      ========================================================= */
+
+      .compare-card__bottom {
+        min-height: 55px;
+
+        padding: 0 20px;
+
+        display: flex;
+        align-items: center;
+
+        gap: 14px;
+
+        color: var(--color-muted);
+
+        font-size: 8px;
+
+        font-weight: 750;
+
+        letter-spacing: 0.1em;
+
+        text-transform: uppercase;
+      }
+
+      .compare-card__line {
+        flex: 1;
+
+        height: 1px;
+
+        background: var(--color-border);
+      }
+
+      /* =========================================================
+         HOVER
+      ========================================================= */
+
+      @media (hover: hover) and (pointer: fine) {
+        .compare-card:hover {
+          transform: translateY(-7px);
+
+          border-color: rgba(139, 185, 0, 0.25);
+
+          box-shadow: 0 30px 80px rgba(18, 24, 17, 0.09);
+        }
+
+        .compare-card:hover .compare-card__index {
+          background: var(--color-accent);
+
+          color: #080d10;
+
+          transform: rotate(-5deg) scale(1.08);
+        }
+
+        .compare-card:hover .compare__handle {
+          transform: translate(-50%, -50%) scale(1.1);
+
+          box-shadow: 0 17px 38px rgba(0, 0, 0, 0.2);
+        }
+      }
+
+      /* =========================================================
+         HANDLE ANIMATION
+      ========================================================= */
+
+      @keyframes compareHandlePulse {
+        0% {
+          opacity: 0.5;
+
+          transform: scale(0.8);
+        }
+
+        100% {
+          opacity: 0;
+
+          transform: scale(1.45);
+        }
+      }
+
+      /* =========================================================
+         MOBILE
+      ========================================================= */
+
+      @media (max-width: 767px) {
+        .transformations {
+          padding-top: 85px;
+          padding-bottom: 85px;
+        }
+
+        .transformations__grid {
+          grid-template-columns: 1fr;
+
+          gap: 18px;
+
+          margin-top: 45px;
+        }
+
+        .compare-card {
+          border-radius: 17px;
+        }
+
+        .compare-card__top {
+          min-height: 60px;
+
+          padding: 0 15px;
+        }
+
+        .compare-card__hint {
+          display: none;
+        }
+
+        .compare {
+          aspect-ratio: 0.9 / 1;
+        }
+
+        .compare__handle {
+          width: 46px;
+          height: 46px;
+        }
+
+        .compare__label {
+          top: 14px;
+
+          min-width: 52px;
+
+          height: 27px;
+
+          font-size: 8px;
+        }
+
+        .compare__label--before {
+          left: 14px;
+        }
+
+        .compare__label--after {
+          right: 14px;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .compare__handle::before {
+          animation: none;
+        }
+      }
+    </style>
+
+    <!-- TVŮJ HLAVNÍ JS -->
+    <script src="app.js" defer></script>
+  </head>
+
+  <body class="before-after-page">
+    <header class="site-header" data-header>
+      <div class="container nav__inner">
+        <a class="nav__logo" href="index.html" aria-label="DAVAMA – domů">
+          <img
+            src="assets/logo.png"
+            alt="DAVAMA Úklidové služby"
+            width="210"
+            height="53"
+          />
+        </a>
+
+        <nav class="nav nav--desktop" aria-label="Hlavní navigace">
+          <a class="nav__link" href="index.html"> Domů </a>
+
+          <!-- SLUŽBY -->
+
+          <div class="nav__item nav__item--dropdown">
+            <button
+              class="nav__link nav__link--button"
+              type="button"
+              aria-expanded="false"
+              aria-controls="services-menu"
+            >
+              Služby
+
+              <span class="nav__chevron" aria-hidden="true"></span>
+            </button>
+
+            <div class="dropdown" id="services-menu" role="menu">
+              <a role="menuitem" href="generalni-uklid.html">
+                Generální úklid
+              </a>
+
+              <a role="menuitem" href="pravidelny-uklid.html">
+                Pravidelný úklid
+              </a>
+
+              <a role="menuitem" href="postavebni-uklid.html">
+                Postavební úklid
+              </a>
+
+              <a role="menuitem" href="myti-oken.html"> Mytí oken </a>
+
+              <a role="menuitem" href="chemicke-cisteni.html">
+                Chemické čištění
+              </a>
+
+              <a role="menuitem" href="dalsi-sluzby.html"> Doplňkové služby </a>
+            </div>
+          </div>
+
+          <!-- GALERIE -->
+
+          <div class="nav__item nav__item--dropdown">
+            <button
+              class="nav__link nav__link--button"
+              type="button"
+              aria-expanded="false"
+              aria-controls="gallery-menu"
+            >
+              Galerie
+
+              <span class="nav__chevron" aria-hidden="true"></span>
+            </button>
+
+            <div
+              class="dropdown dropdown--compact"
+              id="gallery-menu"
+              role="menu"
+            >
+              <a role="menuitem" href="pred-po.html"> Před / Po </a>
+
+              <a role="menuitem" href="realizace.html"> Realizace </a>
+            </div>
+          </div>
+
+          <a class="nav__link" href="o-nas.html"> O nás </a>
+
+          <a class="nav__link" href="cenik.html"> Ceník </a>
+
+          <a class="nav__link" href="kontakt.html"> Kontakt </a>
+        </nav>
+
+        <!-- HEADER CTA -->
+
+        <a
+          class="btn btn--primary nav__cta"
+          href="https://wa.me/420736751437"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Poptat úklid přes WhatsApp"
+        >
+          <span> Nezávazná poptávka </span>
+
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M12 2.1a9.65 9.65 0 0 0-8.26 14.65L2.5 21.5l4.86-1.27A9.7 9.7 0 1 0 12 2.1Zm0 17.54a7.9 7.9 0 0 1-4.03-1.1l-.29-.17-2.88.75.77-2.8-.19-.3A7.92 7.92 0 1 1 12 19.64Zm4.34-5.91c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.92-1.19-.71-.63-1.19-1.41-1.33-1.65-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.19-.46-.39-.4-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.69 2.58 4.1 3.62.57.25 1.02.4 1.37.51.58.18 1.1.16 1.51.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28Z"
+            ></path>
+          </svg>
+        </a>
+
+        <button
+          class="burger"
+          type="button"
+          aria-label="Otevřít menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          data-menu-toggle
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <div
+      class="mobile-nav"
+      id="mobile-menu"
+      aria-hidden="true"
+      data-mobile-menu
+    >
+      <div class="mobile-nav__decor" aria-hidden="true">
+        <span class="bubble bubble--1"></span>
+        <span class="bubble bubble--2"></span>
+        <span class="bubble bubble--3"></span>
+        <span class="bubble bubble--4"></span>
+      </div>
+
+      <div class="mobile-nav__top container">
+        <a
+          class="mobile-nav__logo"
+          href="index.html"
+          aria-label="DAVAMA – domů"
+        >
+          <img
+            src="assets/logo.png"
+            alt="DAVAMA Úklidové služby"
+            width="210"
+            height="53"
+          />
+        </a>
+
+        <button
+          class="burger burger--overlay"
+          type="button"
+          aria-label="Zavřít menu"
+          aria-expanded="true"
+          aria-controls="mobile-menu"
+          data-menu-close
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <nav class="mobile-nav__content container" aria-label="Mobilní navigace">
+        <a class="mobile-nav__link" href="index.html"> Domů </a>
+
+        <details class="mobile-nav__group">
+          <summary class="mobile-nav__link">
+            Služby
+
+            <i class="mobile-nav__arrow" aria-hidden="true"></i>
+          </summary>
+
+          <div class="mobile-nav__submenu">
+            <a href="generalni-uklid.html"> Generální úklid </a>
+
+            <a href="pravidelny-uklid.html"> Pravidelný úklid </a>
+
+            <a href="postavebni-uklid.html"> Postavební úklid </a>
+
+            <a href="myti-oken.html"> Mytí oken </a>
+
+            <a href="chemicke-cisteni.html"> Chemické čištění </a>
+
+            <a href="dalsi-sluzby.html"> Doplňkové služby </a>
+          </div>
+        </details>
+
+        <details class="mobile-nav__group">
+          <summary class="mobile-nav__link">
+            Galerie
+
+            <i class="mobile-nav__arrow" aria-hidden="true"></i>
+          </summary>
+
+          <div class="mobile-nav__submenu">
+            <a href="pred-po.html"> Před / Po </a>
+
+            <a href="realizace.html"> Realizace </a>
+          </div>
+        </details>
+
+        <a class="mobile-nav__link" href="o-nas.html"> O nás </a>
+
+        <a class="mobile-nav__link" href="cenik.html"> Ceník </a>
+
+        <a class="mobile-nav__link" href="kontakt.html"> Kontakt </a>
+
+        <a
+          class="btn btn--primary nav__cta"
+          href="https://wa.me/420736751437"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span> Nezávazná poptávka </span>
+
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M12 2.1a9.65 9.65 0 0 0-8.26 14.65L2.5 21.5l4.86-1.27A9.7 9.7 0 1 0 12 2.1Zm0 17.54a7.9 7.9 0 0 1-4.03-1.1l-.29-.17-2.88.75.77-2.8-.19-.3A7.92 7.92 0 1 1 12 19.64Zm4.34-5.91c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.92-1.19-.71-.63-1.19-1.41-1.33-1.65-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.19-.46-.39-.4-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.69 2.58 4.1 3.62.57.25 1.02.4 1.37.51.58.18 1.1.16 1.51.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28Z"
+            ></path>
+          </svg>
+        </a>
+      </nav>
+    </div>
+
+    <main>
+      <!-- =====================================================
+           HERO
+      ====================================================== -->
+
+      <section class="hero before-after-hero" id="domu">
+        <div class="hero__media" aria-hidden="true">
+          <img class="hero__image" src="assets/services/111.png" alt="" />
+        </div>
+
+        <div class="hero__shade" aria-hidden="true"></div>
+
+        <div class="container hero__container">
+          <div class="hero__content">
+            <div class="hero__eyebrow">
+              <span class="hero__eyebrow-dot"></span>
+
+              <span> DAVAMA · skutečné výsledky úklidu </span>
+            </div>
+
+            <h1 class="hero__title">
+              <span class="hero__title-line">
+                <span class="hero__title-word"> PŘED </span>
+              </span>
+
+              <span class="hero__title-line hero__title-line--accent">
+                <span class="hero__title-word"> A PO </span>
+              </span>
+
+              <span class="hero__title-line">
+                <span class="hero__title-word"> ÚKLIDU </span>
+              </span>
+            </h1>
+
+            <p class="hero__description">
+              Nejlíp mluví výsledek – prohlédněte si, jak to u nás vypadalo před
+              úklidem a jak po něm.
+            </p>
+
+            <div class="hero__actions">
+              <a
+                class="btn btn--primary nav__cta"
+                href="https://wa.me/420736751437?text=Dobr%C3%BD%20den%2C%20m%C3%A1m%20z%C3%A1jem%20o%20%C3%BAklidov%C3%A9%20slu%C5%BEby."
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Poptat úklid přes WhatsApp"
+              >
+                <span>Nezávazná poptávka</span>
+
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M12 2.1a9.65 9.65 0 0 0-8.26 14.65L2.5 21.5l4.86-1.27A9.7 9.7 0 1 0 12 2.1Zm0 17.54a7.9 7.9 0 0 1-4.03-1.1l-.29-.17-2.88.75.77-2.8-.19-.3A7.92 7.92 0 1 1 12 19.64Zm4.34-5.91c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.92-1.19-.71-.63-1.19-1.41-1.33-1.65-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.19-.46-.39-.4-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.69 2.58 4.1 3.62.57.25 1.02.4 1.37.51.58.18 1.1.16 1.51.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28Z"
+                  />
+                </svg>
+              </a>
+
+              <a class="btn hero__secondary" href="#pred-po">
+                <span> Prohlédnout proměny </span>
+
+                <span class="services-cta__arrow">
+                  <svg viewBox="0 0 44 24" aria-hidden="true">
+                    <path d="M2 12H40"></path>
+                    <path d="M34 6L40 12L34 18"></path>
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__bubbles" data-hero-bubbles aria-hidden="true"></div>
+
+        <div class="hero__foam" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </section>
+      <section
+        class="marquee-section"
+        aria-label="Skutečné výsledky úklidu DAVAMA"
+      >
+        <div class="marquee" data-marquee>
+          <div class="marquee__track">
+            <!-- GROUP 01 -->
+
+            <div class="marquee__group">
+              <div class="marquee__item marquee__item--accent">
+                <span>PŘED</span>
+              </div>
+
+              <span class="marquee__dot"></span>
+
+              <div class="marquee__item">
+                <span>PO</span>
+              </div>
+
+              <span class="marquee__dot"></span>
+
+              <div class="marquee__item marquee__item--accent">
+                <span>DETAILY</span>
+              </div>
+
+              <span class="marquee__dot"></span>
+
+              <div class="marquee__item">
+                <span>ČISTOTA</span>
+              </div>
+
+              <span class="marquee__dot"></span>
+
+              <div class="marquee__item marquee__item--accent">
+                <span>SKUTEČNÉ PROMĚNY</span>
+              </div>
+
+              <span class="marquee__dot"></span>
+
+              <div class="marquee__item">
+                <span>DAVAMA</span>
+              </div>
+
+              <span class="marquee__dot"></span>
+
+              <div class="marquee__item marquee__item--accent">
+                <span> VÝSLEDEK MLUVÍ ZA NÁS </span>
+              </div>
+
+              <span class="marquee__dot"></span>
+            </div>
+
+            <!-- DUPLICATE -->
+
+            <div class="marquee__group" aria-hidden="true">
+              <div class="marquee__item marquee__item--accent">
+                <span>PŘED</span>
+              </div>
+
+              <span class="marquee__dot"></span>
+
+              <div class="marquee__item">
+                <span>PO</span>
+              </div>
+
+              <span class="marquee__dot"></span>
+
+              <div class="marquee__item marquee__item--accent">
+                <span>DETAILY</span>
+              </div>
+
+              <span class="marquee__dot"></span>
+
+              <div class="marquee__item">
+                <span>ČISTOTA</span>
+              </div>
+
+              <span class="marquee__dot"></span>
+
+              <div class="marquee__item marquee__item--accent">
+                <span>SKUTEČNÉ PROMĚNY</span>
+              </div>
+
+              <span class="marquee__dot"></span>
+
+              <div class="marquee__item">
+                <span>DAVAMA</span>
+              </div>
+
+              <span class="marquee__dot"></span>
+
+              <div class="marquee__item marquee__item--accent">
+                <span> VÝSLEDEK MLUVÍ ZA NÁS </span>
+              </div>
+
+              <span class="marquee__dot"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- =====================================================
+           BEFORE / AFTER
+      ====================================================== -->
+
+      <section class="section transformations" id="pred-po" data-reveal-section>
+        <div
+          class="section-bubbles transformations__bubbles"
+          data-section-bubbles
+          aria-hidden="true"
+        ></div>
+
+        <div class="container">
+          <header class="section-head section-head--center">
+            <div class="section-eyebrow reveal-item">Skutečné proměny</div>
+
+            <h2 class="section-title transformations__title">
+              <span class="section-title__line reveal-title-line">
+                Rozdíl, který
+              </span>
+
+              <span class="section-title__line reveal-title-line">
+                <span class="text-accent"> uvidíte </span>
+              </span>
+            </h2>
+
+            <span class="section-divider reveal-item ml-0"></span>
+
+            <p class="section-description reveal-item">
+              Posuňte jezdec a podívejte se na výsledek před úklidem a po něm.
+            </p>
+          </header>
+
+          <div class="transformations__grid">
+            <!-- ===============================================
+                 01
+            ================================================ -->
+
+            <article class="compare-card reveal-item" data-compare>
+              <div class="compare-card__top">
+                <span class="compare-card__index"> 01 </span>
+
+                <span class="compare-card__type"> Generální úklid </span>
+
+                <span class="compare-card__hint"> Před / Po </span>
+              </div>
+
+              <div class="compare" style="--position: 50%">
+                <!-- AFTER -->
+
+                <img
+                  src="assets/gallery/01-after.jpg"
+                  alt="Po generálním úklidu"
+                  class="compare__image compare__image--after"
+                />
+
+                <!-- BEFORE -->
+
+                <div class="compare__before">
+                  <img
+                    src="assets/gallery/01-before.jpg"
+                    alt="Před generálním úklidem"
+                    class="compare__image compare__image--before"
+                  />
+                </div>
+
+                <span class="compare__label compare__label--before">
+                  Před
+                </span>
+
+                <span class="compare__label compare__label--after"> Po </span>
+
+                <div class="compare__divider">
+                  <span class="compare__handle">
+                    <svg viewBox="0 0 32 20" aria-hidden="true">
+                      <path d="M12 4 6 10l6 6"></path>
+
+                      <path d="m20 4 6 6-6 6"></path>
+                    </svg>
+                  </span>
+                </div>
+
+                <input
+                  class="compare__range"
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="50"
+                  aria-label="Porovnat stav před a po úklidu"
+                />
+              </div>
+
+              <div class="compare-card__bottom">
+                <span> Táhněte pro porovnání </span>
+
+                <span class="compare-card__line"></span>
+
+                <span> DAVAMA </span>
+              </div>
+            </article>
+
+            <!-- ===============================================
+                 02
+            ================================================ -->
+
+            <article class="compare-card reveal-item" data-compare>
+              <div class="compare-card__top">
+                <span class="compare-card__index"> 02 </span>
+
+                <span class="compare-card__type"> Kuchyně </span>
+
+                <span class="compare-card__hint"> Před / Po </span>
+              </div>
+
+              <div class="compare" style="--position: 50%">
+                <img
+                  src="assets/gallery/02-after.jpg"
+                  alt="Kuchyně po úklidu"
+                  class="compare__image compare__image--after"
+                />
+
+                <div class="compare__before">
+                  <img
+                    src="assets/gallery/02-before.jpg"
+                    alt="Kuchyně před úklidem"
+                    class="compare__image compare__image--before"
+                  />
+                </div>
+
+                <span class="compare__label compare__label--before">
+                  Před
+                </span>
+
+                <span class="compare__label compare__label--after"> Po </span>
+
+                <div class="compare__divider">
+                  <span class="compare__handle">
+                    <svg viewBox="0 0 32 20" aria-hidden="true">
+                      <path d="M12 4 6 10l6 6"></path>
+
+                      <path d="m20 4 6 6-6 6"></path>
+                    </svg>
+                  </span>
+                </div>
+
+                <input
+                  class="compare__range"
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="50"
+                  aria-label="Porovnat kuchyň před a po úklidu"
+                />
+              </div>
+
+              <div class="compare-card__bottom">
+                <span> Táhněte pro porovnání </span>
+
+                <span class="compare-card__line"></span>
+
+                <span> DAVAMA </span>
+              </div>
+            </article>
+
+            <!-- ===============================================
+                 03
+            ================================================ -->
+
+            <article class="compare-card reveal-item" data-compare>
+              <div class="compare-card__top">
+                <span class="compare-card__index"> 03 </span>
+
+                <span class="compare-card__type"> Koupelna </span>
+
+                <span class="compare-card__hint"> Před / Po </span>
+              </div>
+
+              <div class="compare" style="--position: 50%">
+                <img
+                  src="assets/gallery/03-after.jpg"
+                  alt="Koupelna po úklidu"
+                  class="compare__image compare__image--after"
+                />
+
+                <div class="compare__before">
+                  <img
+                    src="assets/gallery/03-before.jpg"
+                    alt="Koupelna před úklidem"
+                    class="compare__image compare__image--before"
+                  />
+                </div>
+
+                <span class="compare__label compare__label--before">
+                  Před
+                </span>
+
+                <span class="compare__label compare__label--after"> Po </span>
+
+                <div class="compare__divider">
+                  <span class="compare__handle">
+                    <svg viewBox="0 0 32 20" aria-hidden="true">
+                      <path d="M12 4 6 10l6 6"></path>
+
+                      <path d="m20 4 6 6-6 6"></path>
+                    </svg>
+                  </span>
+                </div>
+
+                <input
+                  class="compare__range"
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="50"
+                  aria-label="Porovnat koupelnu před a po úklidu"
+                />
+              </div>
+
+              <div class="compare-card__bottom">
+                <span> Táhněte pro porovnání </span>
+
+                <span class="compare-card__line"></span>
+
+                <span> DAVAMA </span>
+              </div>
+            </article>
+
+            <!-- ===============================================
+                 04
+            ================================================ -->
+
+            <article class="compare-card reveal-item" data-compare>
+              <div class="compare-card__top">
+                <span class="compare-card__index"> 04 </span>
+
+                <span class="compare-card__type"> Chemické čištění </span>
+
+                <span class="compare-card__hint"> Před / Po </span>
+              </div>
+
+              <div class="compare" style="--position: 50%">
+                <img
+                  src="assets/gallery/04-after.jpg"
+                  alt="Čalounění po chemickém čištění"
+                  class="compare__image compare__image--after"
+                />
+
+                <div class="compare__before">
+                  <img
+                    src="assets/gallery/04-before.jpg"
+                    alt="Čalounění před chemickým čištěním"
+                    class="compare__image compare__image--before"
+                  />
+                </div>
+
+                <span class="compare__label compare__label--before">
+                  Před
+                </span>
+
+                <span class="compare__label compare__label--after"> Po </span>
+
+                <div class="compare__divider">
+                  <span class="compare__handle">
+                    <svg viewBox="0 0 32 20" aria-hidden="true">
+                      <path d="M12 4 6 10l6 6"></path>
+
+                      <path d="m20 4 6 6-6 6"></path>
+                    </svg>
+                  </span>
+                </div>
+
+                <input
+                  class="compare__range"
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="50"
+                  aria-label="Porovnat čalounění před a po čištění"
+                />
+              </div>
+
+              <div class="compare-card__bottom">
+                <span> Táhněte pro porovnání </span>
+
+                <span class="compare-card__line"></span>
+
+                <span> DAVAMA </span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+           IMAGE MESSAGE
+      ====================================================== -->
+
+      <section class="image-message section" data-reveal-section>
+        <div class="image-message__media" aria-hidden="true">
+          <img
+            src="assets/services/2.png"
+            alt=""
+            class="image-message__image"
+          />
+        </div>
+
+        <div class="image-message__shade" aria-hidden="true"></div>
+
+        <div
+          class="section-bubbles image-message__bubbles"
+          data-section-bubbles
+          aria-hidden="true"
+        ></div>
+
+        <div class="container image-message__container">
+          <div class="image-message__content">
+            <div class="section-eyebrow image-message__eyebrow reveal-item">
+              <span class="hero__eyebrow-dot"></span>
+
+              PŘED A PO
+            </div>
+
+            <h2 class="image-message__title">
+              <span class="image-message__line reveal-item">
+                NEJLÍP MLUVÍ
+              </span>
+
+              <span class="image-message__line reveal-item"> SKUTEČNÝ </span>
+
+              <span
+                class="image-message__line image-message__line--accent reveal-item"
+              >
+                VÝSLEDEK.
+              </span>
+
+              <span
+                class="image-message__line image-message__line--accent reveal-item"
+              >
+                PODÍVEJTE SE.
+              </span>
+            </h2>
+
+            <p class="image-message__text reveal-item">
+              Nejlíp mluví výsledek – prohlédněte si, jak to u nás vypadalo před
+              úklidem a jak po něm.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+           MARQUEE
+      ====================================================== -->
+
+      <section
+        class="marquee-section"
+        aria-label="Skutečné výsledky úklidu DAVAMA"
+      >
+        <div class="marquee" data-marquee>
+          <div class="marquee__track">
+            <!-- GROUP 01 -->
+
+            <div class="marquee__group">
+              <div class="marquee__item marquee__item--accent">
+                <span>PŘED</span>
+              </div>
+
+              <span class="marquee__dot"></span>
+
+              <div class="marquee__item">
+                <span>PO</span>
+              </div>
+
+              <span class="marquee__dot"></span>
+
+              <div class="marquee__item marquee__item--accent">
+                <span>DETAILY</span>
+              </div>
+
+              <span class="marquee__dot"></span>
+
+              <div class="marquee__item">
+                <span>ČISTOTA</span>
+              </div>
+
+              <span class="marquee__dot"></span>
+
+              <div class="marquee__item marquee__item--accent">
+                <span>SKUTEČNÉ PROMĚNY</span>
+              </div>
+
+              <span class="marquee__dot"></span>
+
+              <div class="marquee__item">
+                <span>DAVAMA</span>
+              </div>
+
+              <span class="marquee__dot"></span>
+
+              <div class="marquee__item marquee__item--accent">
+                <span> VÝSLEDEK MLUVÍ ZA NÁS </span>
+              </div>
+
+              <span class="marquee__dot"></span>
+            </div>
+
+            <!-- DUPLICATE -->
+
+            <div class="marquee__group" aria-hidden="true">
+              <div class="marquee__item marquee__item--accent">
+                <span>PŘED</span>
+              </div>
+
+              <span class="marquee__dot"></span>
+
+              <div class="marquee__item">
+                <span>PO</span>
+              </div>
+
+              <span class="marquee__dot"></span>
+
+              <div class="marquee__item marquee__item--accent">
+                <span>DETAILY</span>
+              </div>
+
+              <span class="marquee__dot"></span>
+
+              <div class="marquee__item">
+                <span>ČISTOTA</span>
+              </div>
+
+              <span class="marquee__dot"></span>
+
+              <div class="marquee__item marquee__item--accent">
+                <span>SKUTEČNÉ PROMĚNY</span>
+              </div>
+
+              <span class="marquee__dot"></span>
+
+              <div class="marquee__item">
+                <span>DAVAMA</span>
+              </div>
+
+              <span class="marquee__dot"></span>
+
+              <div class="marquee__item marquee__item--accent">
+                <span> VÝSLEDEK MLUVÍ ZA NÁS </span>
+              </div>
+
+              <span class="marquee__dot"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+           CONTACT — TVOJE EXISTUJÍCÍ SEKCE
+      ====================================================== -->
+
+      <section class="section contact-mini" id="kontakt" data-reveal-section>
+        <div
+          class="section-bubbles contact-mini__bubbles"
+          data-section-bubbles
+          aria-hidden="true"
+        ></div>
+
+        <div class="contact-mini__brand" aria-hidden="true">DAVAMA</div>
+
+        <div class="container contact-mini__container">
+          <!-- CONTACT INFO -->
+
+          <div class="contact-mini__info">
+            <header class="section-head contact-mini__head">
+              <div class="section-eyebrow reveal-item">Kontakt</div>
+
+              <h2 class="section-title contact-mini__title reveal-item">
+                <span class="section-title__line"> Spojte se </span>
+
+                <span class="section-title__line">
+                  <span class="text-accent"> s námi. </span>
+                </span>
+              </h2>
+
+              <p
+                class="section-description contact-mini__description reveal-item"
+              >
+                Napište, zavolejte nebo přijďte rovnou k věci přes WhatsApp –
+                ozveme se co nejdřív.
+              </p>
+            </header>
+
+            <div class="contact-mini__links">
+              <a
+                class="contact-mini__link reveal-item"
+                href="tel:+420736751437"
+              >
+                <span class="contact-mini__icon">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M7.3 3.5 9.6 3c.6-.1 1.2.2 1.4.8l1.2 3c.2.6 0 1.2-.5 1.6l-1.6 1.1a14.3 14.3 0 0 0 4.4 4.4l1.1-1.6c.4-.5 1-.7 1.6-.5l3 1.2c.6.2.9.8.8 1.4l-.5 2.3c-.2.9-1 1.5-1.9 1.5C11.2 18.2 5.8 12.8 5.8 5.4c0-.9.6-1.7 1.5-1.9Z"
+                    ></path>
+                  </svg>
+                </span>
+
+                <span>
+                  <small> Telefon </small>
+
+                  <strong> +420 736 751 437 </strong>
+                </span>
+              </a>
+
+              <a
+                class="contact-mini__link reveal-item"
+                href="mailto:davama_uklid@seznam.cz"
+              >
+                <span class="contact-mini__icon">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+
+                    <path d="m4 7 8 6 8-6"></path>
+                  </svg>
+                </span>
+
+                <span>
+                  <small> E-mail </small>
+
+                  <strong> davama_uklid@seznam.cz </strong>
+                </span>
+              </a>
+            </div>
+
+            <a
+              class="btn btn--primary hero__primary"
+              href="https://wa.me/420736751437"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M12 2.1a9.65 9.65 0 0 0-8.26 14.65L2.5 21.5l4.86-1.27A9.7 9.7 0 1 0 12 2.1Zm0 17.54a7.9 7.9 0 0 1-4.03-1.1l-.29-.17-2.88.75.77-2.8-.19-.3A7.92 7.92 0 1 1 12 19.64Zm4.34-5.91c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.92-1.19-.71-.63-1.19-1.41-1.33-1.65-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.19-.46-.39-.4-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.69 2.58 4.1 3.62.57.25 1.02.4 1.37.51.58.18 1.1.16 1.51.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28Z"
+                ></path>
+              </svg>
+
+              <span> Nezávazná poptávka </span>
+            </a>
+          </div>
+
+          <!-- FORM -->
+
+          <div class="contact-mini__form-wrap reveal-item">
+            <div class="contact-mini__form-head">
+              <span> Nezávazná </span>
+
+              <h3>Poptávka<span>.</span></h3>
+            </div>
+
+            <form
+              class="contact-form"
+              id="contact-form"
+              action="#"
+              method="post"
+            >
+              <div class="contact-form__row">
+                <label class="form-field">
+                  <span class="form-field__label"> Jméno <em>*</em> </span>
+
+                  <input type="text" name="name" autocomplete="name" required />
+                </label>
+
+                <label class="form-field">
+                  <span class="form-field__label"> Telefon <em>*</em> </span>
+
+                  <input type="tel" name="phone" autocomplete="tel" required />
+                </label>
+              </div>
+
+              <label class="form-field">
+                <span class="form-field__label"> Adresa <em>*</em> </span>
+
+                <input
+                  type="text"
+                  name="address"
+                  autocomplete="street-address"
+                  required
+                />
+              </label>
+
+              <label class="form-field">
+                <span class="form-field__label"> Zpráva </span>
+
+                <textarea
+                  name="message"
+                  rows="4"
+                  placeholder="Co byste potřebovali uklidit a kdy?"
+                ></textarea>
+              </label>
+
+              <label class="contact-form__consent">
+                <input type="checkbox" name="privacy" required />
+
+                <span class="contact-form__checkbox"></span>
+
+                <span>
+                  Souhlasím se zpracováním osobních údajů
+                  <em>*</em>
+                </span>
+              </label>
+
+              <button
+                class="btn btn--primary contact-form__submit"
+                type="submit"
+              >
+                <span> Odeslat poptávku </span>
+
+                <span class="contact-form__submit-arrow">
+                  <svg viewBox="0 0 44 24" aria-hidden="true">
+                    <path d="M2 12H40"></path>
+                    <path d="M34 6L40 12L34 18"></path>
+                  </svg>
+                </span>
+              </button>
+
+              <p class="contact-form__note">
+                Děkujeme a ozveme se vám do 5 hodin.
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <a
+      class="whatsapp-bubble"
+      href="https://wa.me/420736751437"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Napsat nám na WhatsApp"
+    >
+      <span class="whatsapp-bubble__particles" aria-hidden="true">
+        <i class="whatsapp-bubble__small whatsapp-bubble__small--1"></i>
+        <i class="whatsapp-bubble__small whatsapp-bubble__small--2"></i>
+        <i class="whatsapp-bubble__small whatsapp-bubble__small--3"></i>
+        <i class="whatsapp-bubble__small whatsapp-bubble__small--4"></i>
+        <i class="whatsapp-bubble__small whatsapp-bubble__small--5"></i>
+        <i class="whatsapp-bubble__small whatsapp-bubble__small--6"></i>
+        <i class="whatsapp-bubble__small whatsapp-bubble__small--7"></i>
+        <i class="whatsapp-bubble__small whatsapp-bubble__small--8"></i>
+      </span>
+
+      <span class="whatsapp-bubble__core">
+        <span class="whatsapp-bubble__shine" aria-hidden="true"></span>
+
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M12 2.1a9.65 9.65 0 0 0-8.26 14.65L2.5 21.5l4.86-1.27A9.7 9.7 0 1 0 12 2.1Zm0 17.54a7.9 7.9 0 0 1-4.03-1.1l-.29-.17-2.88.75.77-2.8-.19-.3A7.92 7.92 0 1 1 12 19.64Zm4.34-5.91c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.92-1.19-.71-.63-1.19-1.41-1.33-1.65-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.19-.46-.39-.4-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.69 2.58 4.1 3.62.57.25 1.02.4 1.37.51.58.18 1.1.16 1.51.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28Z"
+          ></path>
+        </svg>
+      </span>
+    </a>
+    <footer class="site-footer">
+      <!-- decorative bubble -->
+      <span class="site-footer__bubble" aria-hidden="true"></span>
+
+      <div class="container">
+        <div class="site-footer__main">
+          <!-- LOGO -->
+          <div class="site-footer__brand">
+            <a href="/" class="site-footer__logo" aria-label="DAVAMA">
+              <img src="assets/logo.png" alt="DAVAMA" />
+            </a>
+
+            <span class="site-footer__brand-text"> ÚKLIDOVÉ SLUŽBY </span>
+          </div>
+
+          <!-- LINKS -->
+          <div class="site-footer__pages">
+            <nav class="site-footer__nav">
+              <a href="obchodni-podminky.html" class="site-footer__link">
+                <span>Obchodní podmínky</span>
+                <span class="site-footer__arrow">↗</span>
+              </a>
+
+              <a href="ochrana-osobnich-udaju.html" class="site-footer__link">
+                <span>Ochrana osobních údajů</span>
+                <span class="site-footer__arrow">↗</span>
+              </a>
+
+              <a href="zasady-cookies.html" class="site-footer__link">
+                <span>Zásady cookies</span>
+                <span class="site-footer__arrow">↗</span>
+              </a>
+            </nav>
+          </div>
+        </div>
+
+        <!-- BOTTOM -->
+        <div class="site-footer__bottom">
+          <div class="site-footer__safe">
+            <span class="site-footer__check">✓</span>
+
+            <div>
+              <strong>VAŠE ÚDAJE JSOU V BEZPEČÍ.</strong>
+              <span>Zpracováváme je v souladu s GDPR.</span>
+            </div>
+          </div>
+
+          <div class="site-footer__copy">
+            <span>© 2026 DAVAMA</span>
+            <span>Všechna práva vyhrazena.</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function initBeforeAfterCompare() {
+        const cards = document.querySelectorAll("[data-compare]");
+
+        if (!cards.length) {
+          return;
+        }
+
+        cards.forEach((card) => {
+          const compare = card.querySelector(".compare");
+
+          const before = card.querySelector(".compare__before");
+
+          const beforeImage = card.querySelector(".compare__image--before");
+
+          const range = card.querySelector(".compare__range");
+
+          if (!compare || !before || !beforeImage || !range) {
+            return;
+          }
+
+          /* =========================================
+             CORRECT IMAGE WIDTH
+          ========================================= */
+
+          const syncWidth = () => {
+            const width = compare.getBoundingClientRect().width;
+
+            compare.style.setProperty("--compare-width", `${width}px`);
+          };
+
+          /* =========================================
+             UPDATE POSITION
+          ========================================= */
+
+          const update = () => {
+            const value = Number(range.value);
+
+            compare.style.setProperty("--position", `${value}%`);
+          };
+
+          range.addEventListener("input", update);
+
+          window.addEventListener("resize", syncWidth);
+
+          syncWidth();
+
+          update();
+        });
+      }
+
+      initBeforeAfterCompare();
+    </script>
+  </body>
+</html>
