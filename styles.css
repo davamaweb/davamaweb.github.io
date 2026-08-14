@@ -9920,3 +9920,661 @@ button {
     display: none;
   }
 }
+/* =========================================================
+         CONTACT PAGE — FULLSCREEN MAP EXPERIENCE
+      ========================================================= */
+
+.contact-page--cinematic {
+  background: var(--color-background);
+}
+
+.contact-map {
+  --map-x: 50%;
+  --map-y: 50%;
+
+  position: relative;
+  width: 100%;
+  min-height: max(820px, 100svh);
+  overflow: hidden;
+  background: #0a0d0b;
+  color: #fff;
+  isolation: isolate;
+}
+
+.contact-map__canvas,
+.contact-map__iframe,
+.contact-map__veil {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.contact-map__canvas {
+  z-index: 0;
+  overflow: hidden;
+  transform: scale(1.04);
+  opacity: 0;
+  transition:
+    opacity 1.25s ease,
+    transform 2.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.contact-map.is-visible .contact-map__canvas {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.contact-map__iframe {
+  border: 0;
+  filter: grayscale(0.88) saturate(0.45) contrast(1.06) brightness(0.73);
+}
+
+.contact-map__veil {
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(6, 9, 7, 0.94) 0%,
+      rgba(6, 9, 7, 0.82) 34%,
+      rgba(6, 9, 7, 0.26) 66%,
+      rgba(6, 9, 7, 0.38) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(6, 9, 7, 0.44),
+      transparent 30%,
+      transparent 70%,
+      rgba(6, 9, 7, 0.65)
+    );
+}
+
+.contact-map__cursor-glow {
+  position: absolute;
+  left: var(--map-x);
+  top: var(--map-y);
+  z-index: 2;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    circle,
+    rgba(184, 239, 0, 0.16),
+    rgba(184, 239, 0, 0.045) 34%,
+    transparent 70%
+  );
+  filter: blur(5px);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .contact-map:hover .contact-map__cursor-glow {
+    opacity: 1;
+  }
+}
+
+.contact-map__content {
+  position: relative;
+  z-index: 5;
+  min-height: max(820px, 100svh);
+  display: flex;
+  align-items: center;
+}
+
+.contact-map__copy {
+  width: min(100%, 680px);
+  position: relative;
+  z-index: 6;
+}
+
+.contact-map__eyebrow {
+  color: var(--color-accent);
+  border-color: rgba(184, 239, 0, 0.2);
+}
+
+.contact-map__title {
+  margin: 22px 0 0;
+  font-size: clamp(66px, 8.2vw, 138px);
+  line-height: 0.78;
+  letter-spacing: -0.075em;
+  text-transform: uppercase;
+}
+
+.contact-map__title-line {
+  display: block;
+  overflow: hidden;
+}
+
+.contact-map__title-line:last-child span {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(184, 239, 0, 0.82);
+  text-stroke: 1px rgba(184, 239, 0, 0.82);
+}
+
+.contact-map__lead {
+  width: min(100%, 590px);
+  margin: 34px 0 0;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: clamp(14px, 1.25vw, 17px);
+  line-height: 1.75;
+}
+
+.contact-map__transport {
+  margin-top: 34px;
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+
+.contact-map__transport-km {
+  display: grid;
+  place-items: center;
+  width: 72px;
+  height: 72px;
+  flex: 0 0 72px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: #080d10;
+  font-size: 30px;
+  font-weight: 850;
+  letter-spacing: -0.05em;
+  animation: contactTransportPulse 3s ease-in-out infinite;
+}
+
+.contact-map__transport small,
+.contact-map__transport strong {
+  display: block;
+}
+
+.contact-map__transport small {
+  margin-bottom: 5px;
+  color: var(--color-accent);
+  font-size: 9px;
+  font-weight: 850;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.contact-map__transport strong {
+  max-width: 390px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.contact-map__question {
+  margin-top: 30px;
+}
+
+.contact-map__question span,
+.contact-map__question strong {
+  display: block;
+}
+
+.contact-map__question span {
+  color: rgba(255, 255, 255, 0.42);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.contact-map__question strong {
+  margin-top: 7px;
+  font-size: clamp(22px, 2.2vw, 34px);
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+.contact-map__cta {
+  width: fit-content;
+  min-width: 280px;
+  min-height: 62px;
+  margin-top: 28px;
+  justify-content: space-between;
+  padding-inline: 24px;
+}
+
+/* location pulse */
+.contact-map__pin {
+  position: absolute;
+  left: 70%;
+  top: 47%;
+  z-index: 4;
+  width: 120px;
+  height: 120px;
+  display: grid;
+  place-items: center;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.contact-map__pin-core {
+  position: relative;
+  z-index: 3;
+  width: 78px;
+  height: 78px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--color-accent);
+  box-shadow: 0 22px 65px rgba(153, 201, 0, 0.28);
+  opacity: 0;
+  transform: scale(0.2) rotate(-20deg);
+  transition:
+    opacity 0.7s ease 0.55s,
+    transform 1s cubic-bezier(0.34, 1.56, 0.64, 1) 0.55s;
+}
+
+.contact-map.is-visible .contact-map__pin-core {
+  opacity: 1;
+  transform: scale(1) rotate(0);
+  animation: contactPinBreath 2.8s ease-in-out 1.7s infinite;
+}
+
+.contact-map__pin-core svg {
+  width: 35px;
+  height: 35px;
+  fill: none;
+  stroke: #080d10;
+  stroke-width: 1.35;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.contact-map__pulse {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 1px solid rgba(184, 239, 0, 0.62);
+  transform: translate(-50%, -50%) scale(0.4);
+  opacity: 0;
+}
+
+.contact-map.is-visible .contact-map__pulse {
+  animation: contactMapPulse 3.4s ease-out infinite;
+}
+
+.contact-map__pulse--02 {
+  animation-delay: 1.1s !important;
+}
+.contact-map__pulse--03 {
+  animation-delay: 2.2s !important;
+}
+
+/* abstract routes */
+.contact-map__route {
+  position: absolute;
+  z-index: 3;
+  height: 1px;
+  border-top: 1px dashed rgba(184, 239, 0, 0.45);
+  transform-origin: left center;
+  transform: scaleX(0) rotate(var(--route-angle));
+  opacity: 0;
+  transition:
+    transform 1.8s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.contact-map__route--01 {
+  --route-angle: -23deg;
+  left: 70%;
+  top: 47%;
+  width: 25vw;
+  transition-delay: 0.8s;
+}
+
+.contact-map__route--02 {
+  --route-angle: 13deg;
+  left: 70%;
+  top: 47%;
+  width: 22vw;
+  transition-delay: 1s;
+}
+
+.contact-map__route--03 {
+  --route-angle: 168deg;
+  left: 70%;
+  top: 47%;
+  width: 25vw;
+  transition-delay: 1.2s;
+}
+
+.contact-map.is-visible .contact-map__route {
+  opacity: 0.7;
+  transform: scaleX(1) rotate(var(--route-angle));
+  animation: contactRouteBlink 4.8s ease-in-out 2.6s infinite;
+}
+
+/* floating city chips */
+.contact-map__cities {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.contact-map__city {
+  position: absolute;
+  padding: 8px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+  background: rgba(8, 12, 9, 0.63);
+  color: rgba(255, 255, 255, 0.66);
+  backdrop-filter: blur(10px);
+  font-size: 9px;
+  font-weight: 750;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(18px) scale(0.92);
+  transition:
+    opacity 0.6s ease,
+    transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.contact-map.is-visible .contact-map__city {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.contact-map__city--01 {
+  left: 77%;
+  top: 19%;
+  transition-delay: 1.05s;
+  animation: contactFloatA 6s ease-in-out 2.1s infinite;
+}
+.contact-map__city--02 {
+  left: 82%;
+  top: 34%;
+  transition-delay: 1.15s;
+  animation: contactFloatB 7s ease-in-out 2.4s infinite;
+}
+.contact-map__city--03 {
+  left: 67%;
+  top: 71%;
+  transition-delay: 1.25s;
+  animation: contactFloatA 6.4s ease-in-out 2.7s infinite;
+}
+.contact-map__city--04 {
+  left: 85%;
+  top: 62%;
+  transition-delay: 1.35s;
+  animation: contactFloatB 7.2s ease-in-out 3s infinite;
+}
+.contact-map__city--05 {
+  left: 61%;
+  top: 24%;
+  transition-delay: 1.45s;
+  animation: contactFloatA 7s ease-in-out 3.2s infinite;
+}
+.contact-map__city--06 {
+  left: 74%;
+  top: 79%;
+  transition-delay: 1.55s;
+  animation: contactFloatB 6.8s ease-in-out 3.4s infinite;
+}
+.contact-map__city--07 {
+  left: 88%;
+  top: 47%;
+  transition-delay: 1.65s;
+  animation: contactFloatA 6.2s ease-in-out 3.6s infinite;
+}
+.contact-map__city--08 {
+  left: 59%;
+  top: 59%;
+  transition-delay: 1.75s;
+  animation: contactFloatB 7.4s ease-in-out 3.8s infinite;
+}
+
+.contact-map__base {
+  position: absolute;
+  right: 5%;
+  bottom: 7%;
+  z-index: 7;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 13px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  background: rgba(7, 10, 8, 0.68);
+  backdrop-filter: blur(12px);
+}
+
+.contact-map__base-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  box-shadow: 0 0 0 7px rgba(184, 239, 0, 0.08);
+  animation: contactBaseDot 2.2s ease-in-out infinite;
+}
+
+.contact-map__base small,
+.contact-map__base strong {
+  display: block;
+}
+
+.contact-map__base small {
+  color: rgba(255, 255, 255, 0.42);
+  font-size: 8px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.contact-map__base strong {
+  margin-top: 3px;
+  font-size: 11px;
+}
+
+.contact-map__scroll {
+  position: absolute;
+  left: 50%;
+  bottom: 24px;
+  z-index: 7;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: rgba(255, 255, 255, 0.32);
+  font-size: 7px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  pointer-events: none;
+}
+
+.contact-map__scroll i {
+  position: relative;
+  display: block;
+  width: 90px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.15);
+  overflow: hidden;
+}
+
+.contact-map__scroll i::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -30%;
+  width: 30%;
+  height: 1px;
+  background: var(--color-accent);
+  animation: contactScanner 3s ease-in-out infinite;
+}
+
+@keyframes contactPinBreath {
+  0%,
+  100% {
+    transform: scale(0.94) translateY(0);
+  }
+  50% {
+    transform: scale(1.14) translateY(-5px);
+  }
+}
+
+@keyframes contactMapPulse {
+  0% {
+    opacity: 0.6;
+    transform: translate(-50%, -50%) scale(0.45);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(2.5);
+  }
+}
+
+@keyframes contactTransportPulse {
+  0%,
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 16px 34px rgba(139, 184, 0, 0.18);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 22px 54px rgba(139, 184, 0, 0.3);
+  }
+}
+
+@keyframes contactRouteBlink {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes contactFloatA {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 12px -9px;
+  }
+}
+
+@keyframes contactFloatB {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  50% {
+    translate: -10px 10px;
+  }
+}
+
+@keyframes contactBaseDot {
+  0%,
+  100% {
+    transform: scale(0.85);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+}
+
+@keyframes contactScanner {
+  0% {
+    left: -30%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .contact-map__veil {
+    background: linear-gradient(
+      180deg,
+      rgba(6, 9, 7, 0.91) 0%,
+      rgba(6, 9, 7, 0.76) 56%,
+      rgba(6, 9, 7, 0.42) 100%
+    );
+  }
+
+  .contact-map__pin {
+    left: 76%;
+    top: 68%;
+  }
+
+  .contact-map__city {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-map {
+    min-height: 1080px;
+  }
+
+  .contact-map__content {
+    min-height: 1080px;
+    align-items: flex-start;
+  }
+
+  .contact-map__title {
+    font-size: clamp(58px, 17vw, 82px);
+  }
+
+  .contact-map__lead {
+    font-size: 13px;
+    line-height: 1.65;
+  }
+
+  .contact-map__pin {
+    left: 72%;
+    top: 75%;
+    transform: translate(-50%, -50%) scale(0.82);
+  }
+
+  .contact-map__transport-km {
+    width: 62px;
+    height: 62px;
+    flex-basis: 62px;
+    font-size: 26px;
+  }
+
+  .contact-map__cta {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .contact-map__base {
+    right: 16px;
+    bottom: 52px;
+  }
+
+  .contact-map__scroll {
+    left: 16px;
+    transform: none;
+  }
+
+  .contact-map__route {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-map__pin-core,
+  .contact-map__pulse,
+  .contact-map__route,
+  .contact-map__city,
+  .contact-map__base-dot,
+  .contact-map__transport-km,
+  .contact-map__scroll i::after {
+    animation: none !important;
+  }
+}
