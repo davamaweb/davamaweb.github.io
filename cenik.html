@@ -1,0 +1,2208 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Ceník služeb | DAVAMA Úklidové služby</title>
+    <meta
+      name="description"
+      content="Ceník úklidových služeb DAVAMA v Chlumci nad Cidlinou a okolí. Generální, běžný a postavební úklid, chemické a mokré čištění."
+    />
+    <link rel="canonical" href="https://example.com/" />
+    <meta property="og:title" content="DAVAMA Úklidové služby" />
+    <meta
+      property="og:description"
+      content="Profesionální úklid domácností, firem a provozoven v Chlumci nad Cidlinou a okolí."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://example.com/" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <div class="container nav__inner">
+        <!-- LOGO -->
+        <a class="nav__logo" href="index.html" aria-label="DAVAMA – domů">
+          <img
+            src="assets/logo.png"
+            alt="DAVAMA Úklidové služby"
+            width="210"
+            height="53"
+          />
+        </a>
+
+        <!-- DESKTOP NAV -->
+        <nav class="nav nav--desktop" aria-label="Hlavní navigace">
+          <!-- DOMŮ -->
+          <a class="nav__link" href="index.html"> Domů </a>
+
+          <!-- SLUŽBY -->
+          <div class="nav__item nav__item--dropdown">
+            <button
+              class="nav__link nav__link--button"
+              type="button"
+              aria-expanded="false"
+              aria-controls="services-menu"
+            >
+              Služby
+
+              <span class="nav__chevron" aria-hidden="true"></span>
+            </button>
+
+            <div class="dropdown" id="services-menu" role="menu">
+              <a role="menuitem" href="generalni-uklid.html">
+                Generální úklid
+              </a>
+
+              <a role="menuitem" href="pravidelny-uklid.html">
+                Pravidelný úklid
+              </a>
+
+              <a role="menuitem" href="postavebni-uklid.html">
+                Postavební úklid
+              </a>
+
+              <a role="menuitem" href="myti-oken.html"> Mytí oken </a>
+
+              <a role="menuitem" href="chemicke-cisteni.html">
+                Chemické čištění
+              </a>
+
+              <a role="menuitem" href="dalsi-sluzby.html"> Doplňkové služby </a>
+            </div>
+          </div>
+
+          <!-- GALERIE -->
+          <div class="nav__item nav__item--dropdown">
+            <button
+              class="nav__link nav__link--button"
+              type="button"
+              aria-expanded="false"
+              aria-controls="gallery-menu"
+            >
+              Galerie
+
+              <span class="nav__chevron" aria-hidden="true"></span>
+            </button>
+
+            <div
+              class="dropdown dropdown--compact"
+              id="gallery-menu"
+              role="menu"
+            >
+              <a role="menuitem" href="pred-po.html"> Před / Po </a>
+
+              <a role="menuitem" href="realizace.html"> Realizace </a>
+            </div>
+          </div>
+
+          <!-- O NÁS -->
+          <a class="nav__link" href="o-nas.html"> O nás </a>
+
+          <!-- CENÍK -->
+          <a class="nav__link" href="cenik.html"> Ceník </a>
+
+          <!-- KONTAKT -->
+          <a class="nav__link" href="kontakt.html"> Kontakt </a>
+        </nav>
+
+        <!-- MAIN CTA -->
+        <a
+          class="btn btn--primary nav__cta"
+          href="https://wa.me/420736751437?text=Dobr%C3%BD%20den%2C%20m%C3%A1m%20z%C3%A1jem%20o%20%C3%BAklidov%C3%A9%20slu%C5%BEby."
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Poptat úklid přes WhatsApp"
+        >
+          <span>Nezávazná poptávka</span>
+
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M12 2.1a9.65 9.65 0 0 0-8.26 14.65L2.5 21.5l4.86-1.27A9.7 9.7 0 1 0 12 2.1Zm0 17.54a7.9 7.9 0 0 1-4.03-1.1l-.29-.17-2.88.75.77-2.8-.19-.3A7.92 7.92 0 1 1 12 19.64Zm4.34-5.91c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.92-1.19-.71-.63-1.19-1.41-1.33-1.65-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.19-.46-.39-.4-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.69 2.58 4.1 3.62.57.25 1.02.4 1.37.51.58.18 1.1.16 1.51.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28Z"
+            />
+          </svg>
+        </a>
+
+        <!-- MOBILE BURGER -->
+        <button
+          class="burger"
+          type="button"
+          aria-label="Otevřít menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          data-menu-toggle
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <div
+      class="mobile-nav"
+      id="mobile-menu"
+      aria-hidden="true"
+      data-mobile-menu
+    >
+      <div class="mobile-nav__decor" aria-hidden="true">
+        <span class="bubble bubble--1"></span>
+        <span class="bubble bubble--2"></span>
+        <span class="bubble bubble--3"></span>
+        <span class="bubble bubble--4"></span>
+      </div>
+
+      <div class="mobile-nav__top container">
+        <a
+          class="mobile-nav__logo"
+          href="index.html"
+          aria-label="DAVAMA – domů"
+        >
+          <img
+            src="assets/logo.png"
+            alt="DAVAMA Úklidové služby"
+            width="210"
+            height="53"
+          />
+        </a>
+
+        <button
+          class="burger burger--overlay"
+          type="button"
+          aria-label="Zavřít menu"
+          aria-expanded="true"
+          aria-controls="mobile-menu"
+          data-menu-close
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+      <nav class="mobile-nav__content container" aria-label="Mobilní navigace">
+        <!-- DOMŮ -->
+        <a class="mobile-nav__link" href="index.html"> Domů </a>
+
+        <!-- SLUŽBY -->
+        <details class="mobile-nav__group">
+          <summary class="mobile-nav__link">
+            Služby
+            <i class="mobile-nav__arrow" aria-hidden="true"></i>
+          </summary>
+
+          <div class="mobile-nav__submenu">
+            <a href="generalni-uklid.html"> Generální úklid </a>
+
+            <a href="pravidelny-uklid.html"> Pravidelný úklid </a>
+
+            <a href="postavebni-uklid.html"> Postavební úklid </a>
+
+            <a href="myti-oken.html"> Mytí oken </a>
+
+            <a href="chemicke-cisteni.html"> Chemické čištění </a>
+
+            <a href="dalsi-sluzby.html"> Doplňkové služby </a>
+          </div>
+        </details>
+
+        <!-- GALERIE -->
+        <details class="mobile-nav__group">
+          <summary class="mobile-nav__link">
+            Galerie
+            <i class="mobile-nav__arrow" aria-hidden="true"></i>
+          </summary>
+
+          <div class="mobile-nav__submenu">
+            <a href="pred-po.html"> Před / Po </a>
+
+            <a href="realizace.html"> Realizace </a>
+          </div>
+        </details>
+
+        <!-- O NÁS -->
+        <a class="mobile-nav__link" href="o-nas.html"> O nás </a>
+
+        <!-- CENÍK -->
+        <a class="mobile-nav__link" href="cenik.html"> Ceník </a>
+
+        <!-- KONTAKT -->
+        <a class="mobile-nav__link" href="kontakt.html"> Kontakt </a>
+
+        <!-- CTA -->
+        <a
+          class="btn btn--primary nav__cta"
+          href="https://wa.me/420736751437?text=Dobr%C3%BD%20den%2C%20m%C3%A1m%20z%C3%A1jem%20o%20%C3%BAklidov%C3%A9%20slu%C5%BEby."
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Poptat úklid přes WhatsApp"
+        >
+          <span>Nezávazná poptávka</span>
+
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M12 2.1a9.65 9.65 0 0 0-8.26 14.65L2.5 21.5l4.86-1.27A9.7 9.7 0 1 0 12 2.1Zm0 17.54a7.9 7.9 0 0 1-4.03-1.1l-.29-.17-2.88.75.77-2.8-.19-.3A7.92 7.92 0 1 1 12 19.64Zm4.34-5.91c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.92-1.19-.71-.63-1.19-1.41-1.33-1.65-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.19-.46-.39-.4-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.69 2.58 4.1 3.62.57.25 1.02.4 1.37.51.58.18 1.1.16 1.51.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28Z"
+            ></path>
+          </svg>
+        </a>
+      </nav>
+    </div>
+
+    <main class="price-page">
+      <section class="hero price-hero" id="domu">
+        <div class="hero__media" aria-hidden="true">
+          <img class="hero__image" src="assets/hero.png" alt="" />
+        </div>
+
+        <div class="hero__shade" aria-hidden="true"></div>
+
+        <div class="container hero__container">
+          <div class="hero__content">
+            <div class="hero__eyebrow">
+              <span class="hero__eyebrow-dot"></span>
+              <span>DAVAMA · Chlumec nad Cidlinou a okolí</span>
+            </div>
+
+            <h1 class="hero__title">
+              <span class="hero__title-line">
+                <span class="hero__title-word">CENÍK</span>
+              </span>
+
+              <span class="hero__title-line hero__title-line--accent">
+                <span class="hero__title-word">SLUŽEB</span>
+              </span>
+
+              <span class="hero__title-line">
+                <span class="hero__title-word">PŘEHLEDNĚ</span>
+              </span>
+            </h1>
+
+            <p class="hero__description">
+              “Výslednou cenu ovlivňuje typ služby, velikost prostoru a to, jak
+              moc se do úklidu musíme opřít.”
+            </p>
+
+            <div class="hero__benefits">
+              <div class="hero-benefit">
+                <div class="hero-benefit__icon" aria-hidden="true">
+                  <div class="hero-benefit__icon-core">
+                    <svg viewBox="0 0 24 24">
+                      <path d="M5 12h14"></path>
+                      <path d="m14 7 5 5-5 5"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="hero-benefit__content">
+                  <strong>Žádné skryté poplatky</strong>
+                  <span>Platíte jen za reálně odpracovaný čas</span>
+                </div>
+              </div>
+
+              <div class="hero-benefit">
+                <div class="hero-benefit__icon" aria-hidden="true">
+                  <div class="hero-benefit__icon-core">
+                    <svg viewBox="0 0 24 24">
+                      <rect x="3.5" y="6" width="17" height="12" rx="2"></rect>
+                      <path d="M3.5 10h17"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="hero-benefit__content">
+                  <strong>Hotově, kartou nebo převodem</strong>
+                  <span>Vyberete si způsob platby</span>
+                </div>
+              </div>
+
+              <div class="hero-benefit">
+                <div class="hero-benefit__icon" aria-hidden="true">
+                  <div class="hero-benefit__icon-core">
+                    <svg viewBox="0 0 24 24">
+                      <path
+                        d="M12 3.5 19 6v5.1c0 4.4-2.8 7.7-7 9.4-4.2-1.7-7-5-7-9.4V6l7-2.5Z"
+                      ></path>
+                      <path d="m8.6 12 2.1 2.1 4.8-5"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="hero-benefit__content">
+                  <strong>Pojištění do 1 000 000 Kč</strong>
+                  <span>Odpovědnost za škodu</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero__actions">
+              <a
+                class="btn btn--primary hero__primary"
+                href="https://wa.me/420736751437"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M12 2.1a9.65 9.65 0 0 0-8.26 14.65L2.5 21.5l4.86-1.27A9.7 9.7 0 1 0 12 2.1Zm0 17.54a7.9 7.9 0 0 1-4.03-1.1l-.29-.17-2.88.75.77-2.8-.19-.3A7.92 7.92 0 1 1 12 19.64Zm4.34-5.91c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.92-1.19-.71-.63-1.19-1.41-1.33-1.65-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.19-.46-.39-.4-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.69 2.58 4.1 3.62.57.25 1.02.4 1.37.51.58.18 1.1.16 1.51.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28Z"
+                  ></path>
+                </svg>
+
+                <span>Nezávazná poptávka</span>
+              </a>
+
+              <a class="btn hero__secondary" href="#cenik">
+                <span>Zobrazit ceník</span>
+                <span class="services-cta__arrow">
+                  <svg viewBox="0 0 44 24" aria-hidden="true">
+                    <path d="M2 12H40"></path>
+                    <path d="M34 6L40 12L34 18"></path>
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__bubbles" data-hero-bubbles aria-hidden="true"></div>
+
+        <div class="hero__foam" aria-hidden="true">
+          <span></span><span></span><span></span><span></span> <span></span
+          ><span></span><span></span><span></span>
+        </div>
+      </section>
+      <section class="marquee-section" aria-label="Naše úklidové služby">
+        <div class="marquee" data-marquee>
+          <div class="marquee__track">
+            <!-- GROUP 01 -->
+            <div class="marquee__group">
+              <div class="marquee__item">
+                <svg
+                  class="marquee__icon"
+                  viewBox="0 0 48 48"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M24 5c1.5 10.3 6.7 15.5 17 17-10.3 1.5-15.5 6.7-17 17-1.5-10.3-6.7-15.5-17-17C17.3 20.5 22.5 15.3 24 5Z"
+                  />
+                  <path
+                    d="M39 5c.5 3.8 2.4 5.7 6 6.3-3.6.5-5.5 2.4-6 6.2-.6-3.8-2.5-5.7-6.2-6.2C36.5 10.7 38.4 8.8 39 5Z"
+                  />
+                </svg>
+
+                <span>Generální úklid</span>
+              </div>
+
+              <span class="marquee__dot"></span>
+
+              <div class="marquee__item marquee__item--accent">
+                <svg
+                  class="marquee__icon"
+                  viewBox="0 0 48 48"
+                  aria-hidden="true"
+                >
+                  <path d="M10 19h28" />
+                  <rect x="8" y="11" width="32" height="29" rx="5" />
+                  <path d="M16 6v10M32 6v10" />
+                  <path d="M16 26h5M27 26h5M16 33h5M27 33h5" />
+                </svg>
+
+                <span>Pravidelný úklid</span>
+              </div>
+
+              <span class="marquee__dot"></span>
+
+              <div class="marquee__item">
+                <svg
+                  class="marquee__icon"
+                  viewBox="0 0 48 48"
+                  aria-hidden="true"
+                >
+                  <rect x="8" y="7" width="32" height="34" rx="3" />
+                  <path d="M24 7v34M8 24h32" />
+                  <path d="M13 14c2-2 4-3 7-3M29 30c2-2 4-3 7-3" />
+                </svg>
+
+                <span>Mytí oken</span>
+              </div>
+
+              <span class="marquee__dot"></span>
+
+              <div class="marquee__item marquee__item--accent">
+                <svg
+                  class="marquee__icon"
+                  viewBox="0 0 48 48"
+                  aria-hidden="true"
+                >
+                  <path d="M11 29v-5c0-3 2-5 5-5s5 2 5 5v5" />
+                  <path d="M27 29v-5c0-3 2-5 5-5s5 2 5 5v5" />
+                  <path d="M8 28v10h32V28" />
+                  <path d="M13 38v4M35 38v4" />
+                  <path d="M18 13c1.7-3 3.5-5 6-7 2.5 2 4.3 4 6 7" />
+                </svg>
+
+                <span>Chemické čištění</span>
+              </div>
+
+              <span class="marquee__dot"></span>
+
+              <div class="marquee__item">
+                <svg
+                  class="marquee__icon"
+                  viewBox="0 0 48 48"
+                  aria-hidden="true"
+                >
+                  <path d="M6 25 24 9l18 16" />
+                  <path d="M11 22v19h26V22" />
+                  <path d="M19 41V29h10v12" />
+                  <path d="M34 8v9" />
+                </svg>
+
+                <span>Postavební úklid</span>
+              </div>
+
+              <span class="marquee__dot"></span>
+
+              <div class="marquee__item marquee__item--place">
+                <svg
+                  class="marquee__icon"
+                  viewBox="0 0 48 48"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M38 20c0 11-14 22-14 22S10 31 10 20a14 14 0 1 1 28 0Z"
+                  />
+                  <circle cx="24" cy="20" r="5" />
+                </svg>
+
+                <span>Chlumec nad Cidlinou</span>
+              </div>
+
+              <span class="marquee__dot"></span>
+            </div>
+
+            <!-- DUPLICATE FOR SEAMLESS LOOP -->
+            <div class="marquee__group" aria-hidden="true">
+              <div class="marquee__item">
+                <svg class="marquee__icon" viewBox="0 0 48 48">
+                  <path
+                    d="M24 5c1.5 10.3 6.7 15.5 17 17-10.3 1.5-15.5 6.7-17 17-1.5-10.3-6.7-15.5-17-17C17.3 20.5 22.5 15.3 24 5Z"
+                  />
+                  <path
+                    d="M39 5c.5 3.8 2.4 5.7 6 6.3-3.6.5-5.5 2.4-6 6.2-.6-3.8-2.5-5.7-6.2-6.2C36.5 10.7 38.4 8.8 39 5Z"
+                  />
+                </svg>
+                <span>Generální úklid</span>
+              </div>
+
+              <span class="marquee__dot"></span>
+
+              <div class="marquee__item marquee__item--accent">
+                <svg class="marquee__icon" viewBox="0 0 48 48">
+                  <path d="M10 19h28" />
+                  <rect x="8" y="11" width="32" height="29" rx="5" />
+                  <path d="M16 6v10M32 6v10" />
+                  <path d="M16 26h5M27 26h5M16 33h5M27 33h5" />
+                </svg>
+                <span>Pravidelný úklid</span>
+              </div>
+
+              <span class="marquee__dot"></span>
+
+              <div class="marquee__item">
+                <svg class="marquee__icon" viewBox="0 0 48 48">
+                  <rect x="8" y="7" width="32" height="34" rx="3" />
+                  <path d="M24 7v34M8 24h32" />
+                  <path d="M13 14c2-2 4-3 7-3M29 30c2-2 4-3 7-3" />
+                </svg>
+                <span>Mytí oken</span>
+              </div>
+
+              <span class="marquee__dot"></span>
+
+              <div class="marquee__item marquee__item--accent">
+                <svg class="marquee__icon" viewBox="0 0 48 48">
+                  <path d="M11 29v-5c0-3 2-5 5-5s5 2 5 5v5" />
+                  <path d="M27 29v-5c0-3 2-5 5-5s5 2 5 5v5" />
+                  <path d="M8 28v10h32V28" />
+                  <path d="M13 38v4M35 38v4" />
+                  <path d="M18 13c1.7-3 3.5-5 6-7 2.5 2 4.3 4 6 7" />
+                </svg>
+                <span>Chemické čištění</span>
+              </div>
+
+              <span class="marquee__dot"></span>
+
+              <div class="marquee__item">
+                <svg class="marquee__icon" viewBox="0 0 48 48">
+                  <path d="M6 25 24 9l18 16" />
+                  <path d="M11 22v19h26V22" />
+                  <path d="M19 41V29h10v12" />
+                  <path d="M34 8v9" />
+                </svg>
+                <span>Postavební úklid</span>
+              </div>
+
+              <span class="marquee__dot"></span>
+
+              <div class="marquee__item marquee__item--place">
+                <svg class="marquee__icon" viewBox="0 0 48 48">
+                  <path
+                    d="M38 20c0 11-14 22-14 22S10 31 10 20a14 14 0 1 1 28 0Z"
+                  />
+                  <circle cx="24" cy="20" r="5" />
+                </svg>
+                <span>Chlumec nad Cidlinou</span>
+              </div>
+
+              <span class="marquee__dot"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="section price-list"
+        id="cenik"
+        data-reveal-section
+        data-price-list
+      >
+        <div
+          class="section-bubbles price-list__bubbles"
+          data-section-bubbles
+          aria-hidden="true"
+        ></div>
+
+        <div class="container">
+          <!-- =========================
+         HEAD
+    ========================== -->
+          <header class="section-head section-head--center price-list__head">
+            <div class="section-eyebrow reveal-item">Ceník služeb</div>
+
+            <h2 class="section-title price-list__title">
+              <span class="section-title__line reveal-title-line"> Ceník </span>
+
+              <span class="section-title__line reveal-title-line">
+                <span class="text-accent">služeb</span>
+              </span>
+            </h2>
+
+            <span class="section-divider reveal-item"></span>
+
+            <div class="price-list__quote reveal-item">
+              <span class="price-list__quote-mark">“</span>
+
+              <p>
+                Výslednou cenu ovlivňuje typ služby, velikost prostoru a to, jak
+                moc se do úklidu musíme opřít.
+              </p>
+
+              <span class="price-list__quote-mark price-list__quote-mark--end">
+                ”
+              </span>
+            </div>
+          </header>
+
+          <!-- =========================
+         PRICE CARDS
+    ========================== -->
+          <div class="price-list__grid">
+            <!-- =========================================
+           01 — ÚKLIDOVÉ SLUŽBY
+      ========================================== -->
+            <article class="price-card reveal-item" data-price-card>
+              <button
+                class="price-card__header"
+                type="button"
+                data-price-toggle
+                aria-expanded="true"
+              >
+                <div class="price-card__heading">
+                  <span class="price-card__number"> 01 </span>
+
+                  <div>
+                    <span class="price-card__label"> Kategorie </span>
+
+                    <h3 class="price-card__title">Úklidové služby</h3>
+                  </div>
+                </div>
+
+                <span class="price-card__toggle">
+                  <span></span>
+                  <span></span>
+                </span>
+              </button>
+
+              <div class="price-card__body" data-price-body>
+                <div class="price-card__columns">
+                  <span>Služba</span>
+                  <span>Cena</span>
+                </div>
+
+                <a class="price-row" href="generalni-uklid.html">
+                  <span class="price-row__icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M4 11.5 12 5l8 6.5"></path>
+                      <path d="M6.5 10v9h11v-9"></path>
+                      <path d="M10 19v-5h4v5"></path>
+                    </svg>
+                  </span>
+
+                  <span class="price-row__name"> Generální úklid </span>
+
+                  <strong class="price-row__price"> od 350 Kč/hod </strong>
+
+                  <span class="price-row__arrow">
+                    <svg viewBox="0 0 44 24" aria-hidden="true">
+                      <path d="M2 12H40"></path>
+                      <path d="M34 6L40 12L34 18"></path>
+                    </svg>
+                  </span>
+                </a>
+
+                <a class="price-row" href="pravidelny-uklid.html">
+                  <span class="price-row__icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <rect x="4" y="5.5" width="16" height="14" rx="2"></rect>
+                      <path d="M8 3v5M16 3v5M4 9.5h16"></path>
+                      <path d="m8.5 14 2 2 4.5-4.5"></path>
+                    </svg>
+                  </span>
+
+                  <span class="price-row__name"> Běžný úklid </span>
+
+                  <strong class="price-row__price"> od 280 Kč/hod </strong>
+
+                  <span class="price-row__arrow">
+                    <svg viewBox="0 0 44 24" aria-hidden="true">
+                      <path d="M2 12H40"></path>
+                      <path d="M34 6L40 12L34 18"></path>
+                    </svg>
+                  </span>
+                </a>
+
+                <a class="price-row" href="postavebni-uklid.html">
+                  <span class="price-row__icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M4 20h16"></path>
+                      <path d="M6 20v-8h12v8"></path>
+                      <path d="M8 12V7h8v5"></path>
+                      <path d="M10 7V4h4v3"></path>
+                    </svg>
+                  </span>
+
+                  <span class="price-row__name"> Postavební úklid </span>
+
+                  <strong class="price-row__price"> od 380 Kč/hod </strong>
+
+                  <span class="price-row__arrow">
+                    <svg viewBox="0 0 44 24" aria-hidden="true">
+                      <path d="M2 12H40"></path>
+                      <path d="M34 6L40 12L34 18"></path>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+            </article>
+
+            <!-- =========================================
+           02 — CHEMICKÉ ČIŠTĚNÍ
+      ========================================== -->
+            <article class="price-card reveal-item" data-price-card>
+              <button
+                class="price-card__header"
+                type="button"
+                data-price-toggle
+                aria-expanded="true"
+              >
+                <div class="price-card__heading">
+                  <span class="price-card__number"> 02 </span>
+
+                  <div>
+                    <span class="price-card__label"> Kategorie </span>
+
+                    <h3 class="price-card__title">Chemické čištění</h3>
+                  </div>
+                </div>
+
+                <span class="price-card__toggle">
+                  <span></span>
+                  <span></span>
+                </span>
+              </button>
+
+              <div class="price-card__body" data-price-body>
+                <div class="price-card__columns">
+                  <span>Služba</span>
+                  <span>Cena</span>
+                </div>
+
+                <a
+                  class="price-row price-row--compact"
+                  href="chemicke-cisteni.html"
+                >
+                  <span class="price-row__dot"></span>
+
+                  <span class="price-row__name"> Pohovka (2 místa) </span>
+
+                  <strong class="price-row__price"> 750 Kč </strong>
+
+                  <span class="price-row__arrow">
+                    <svg viewBox="0 0 44 24" aria-hidden="true">
+                      <path d="M2 12H40"></path>
+                      <path d="M34 6L40 12L34 18"></path>
+                    </svg>
+                  </span>
+                </a>
+
+                <a
+                  class="price-row price-row--compact"
+                  href="chemicke-cisteni.html"
+                >
+                  <span class="price-row__dot"></span>
+                  <span class="price-row__name">Každé další místo</span>
+                  <strong class="price-row__price">400 Kč</strong>
+
+                  <span class="price-row__arrow">
+                    <svg viewBox="0 0 44 24">
+                      <path d="M2 12H40"></path>
+                      <path d="M34 6L40 12L34 18"></path>
+                    </svg>
+                  </span>
+                </a>
+
+                <a
+                  class="price-row price-row--compact"
+                  href="chemicke-cisteni.html"
+                >
+                  <span class="price-row__dot"></span>
+                  <span class="price-row__name">Křeslo</span>
+                  <strong class="price-row__price">550 Kč</strong>
+
+                  <span class="price-row__arrow">
+                    <svg viewBox="0 0 44 24">
+                      <path d="M2 12H40"></path>
+                      <path d="M34 6L40 12L34 18"></path>
+                    </svg>
+                  </span>
+                </a>
+
+                <a
+                  class="price-row price-row--compact"
+                  href="chemicke-cisteni.html"
+                >
+                  <span class="price-row__dot"></span>
+                  <span class="price-row__name">Kancelářské křeslo</span>
+                  <strong class="price-row__price">200 Kč</strong>
+
+                  <span class="price-row__arrow">
+                    <svg viewBox="0 0 44 24">
+                      <path d="M2 12H40"></path>
+                      <path d="M34 6L40 12L34 18"></path>
+                    </svg>
+                  </span>
+                </a>
+
+                <a
+                  class="price-row price-row--compact"
+                  href="chemicke-cisteni.html"
+                >
+                  <span class="price-row__dot"></span>
+                  <span class="price-row__name">Židle</span>
+                  <strong class="price-row__price">120 Kč</strong>
+
+                  <span class="price-row__arrow">
+                    <svg viewBox="0 0 44 24">
+                      <path d="M2 12H40"></path>
+                      <path d="M34 6L40 12L34 18"></path>
+                    </svg>
+                  </span>
+                </a>
+
+                <a
+                  class="price-row price-row--compact"
+                  href="chemicke-cisteni.html"
+                >
+                  <span class="price-row__dot"></span>
+                  <span class="price-row__name">Kusový koberec</span>
+                  <strong class="price-row__price">150 Kč/m²</strong>
+
+                  <span class="price-row__arrow">
+                    <svg viewBox="0 0 44 24">
+                      <path d="M2 12H40"></path>
+                      <path d="M34 6L40 12L34 18"></path>
+                    </svg>
+                  </span>
+                </a>
+
+                <a
+                  class="price-row price-row--compact"
+                  href="chemicke-cisteni.html"
+                >
+                  <span class="price-row__dot"></span>
+                  <span class="price-row__name">Celoplošné koberce</span>
+                  <strong class="price-row__price">od 100 Kč/m²</strong>
+
+                  <span class="price-row__arrow">
+                    <svg viewBox="0 0 44 24">
+                      <path d="M2 12H40"></path>
+                      <path d="M34 6L40 12L34 18"></path>
+                    </svg>
+                  </span>
+                </a>
+
+                <a
+                  class="price-row price-row--compact"
+                  href="chemicke-cisteni.html"
+                >
+                  <span class="price-row__dot"></span>
+                  <span class="price-row__name">Čištění matrací</span>
+                  <strong class="price-row__price">od 550 Kč</strong>
+
+                  <span class="price-row__arrow">
+                    <svg viewBox="0 0 44 24">
+                      <path d="M2 12H40"></path>
+                      <path d="M34 6L40 12L34 18"></path>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+            </article>
+
+            <!-- =========================================
+           03 — MOKRÉ ČIŠTĚNÍ
+      ========================================== -->
+            <article class="price-card reveal-item" data-price-card>
+              <button
+                class="price-card__header"
+                type="button"
+                data-price-toggle
+                aria-expanded="true"
+              >
+                <div class="price-card__heading">
+                  <span class="price-card__number"> 03 </span>
+
+                  <div>
+                    <span class="price-card__label"> Kategorie </span>
+
+                    <h3 class="price-card__title">Mokré čištění</h3>
+                  </div>
+                </div>
+
+                <span class="price-card__toggle">
+                  <span></span>
+                  <span></span>
+                </span>
+              </button>
+
+              <div class="price-card__body" data-price-body>
+                <div class="price-card__columns">
+                  <span>Služba</span>
+                  <span>Cena</span>
+                </div>
+
+                <a class="price-row" href="myti-oken.html">
+                  <span class="price-row__icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <rect x="4" y="4" width="16" height="16" rx="1.5"></rect>
+                      <path d="M12 4v16M4 12h16"></path>
+                      <path
+                        d="m16.5 7 .6 1.4L18.5 9l-1.4.6-.6 1.4-.6-1.4-1.4-.6 1.4-.6.6-1.4Z"
+                      ></path>
+                    </svg>
+                  </span>
+
+                  <span class="price-row__name"> Mytí oken a výloh </span>
+
+                  <strong class="price-row__price"> 350 Kč/hod </strong>
+
+                  <span class="price-row__arrow">
+                    <svg viewBox="0 0 44 24">
+                      <path d="M2 12H40"></path>
+                      <path d="M34 6L40 12L34 18"></path>
+                    </svg>
+                  </span>
+                </a>
+
+                <a class="price-row" href="dalsi-sluzby.html">
+                  <span class="price-row__icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M6 17h12"></path>
+                      <path d="M8 17v-5h8v5"></path>
+                      <path d="M10 12V8h4v4"></path>
+                      <path d="M5 20h14"></path>
+                    </svg>
+                  </span>
+
+                  <span class="price-row__name"> Strojové čištění podlah </span>
+
+                  <strong class="price-row__price price-row__price--accent">
+                    cena dohodou
+                  </strong>
+
+                  <span class="price-row__arrow">
+                    <svg viewBox="0 0 44 24">
+                      <path d="M2 12H40"></path>
+                      <path d="M34 6L40 12L34 18"></path>
+                    </svg>
+                  </span>
+                </a>
+
+                <a class="price-row" href="dalsi-sluzby.html">
+                  <span class="price-row__icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M5 15.5 7 10h10l2 5.5"></path>
+                      <path d="M4 15.5h16v3H4z"></path>
+                      <circle cx="7" cy="19" r="1.5"></circle>
+                      <circle cx="17" cy="19" r="1.5"></circle>
+                    </svg>
+                  </span>
+
+                  <span class="price-row__name">
+                    Čištění interiéru vozidla
+                  </span>
+
+                  <strong class="price-row__price price-row__price--accent">
+                    cena dohodou
+                  </strong>
+
+                  <span class="price-row__arrow">
+                    <svg viewBox="0 0 44 24">
+                      <path d="M2 12H40"></path>
+                      <path d="M34 6L40 12L34 18"></path>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <!-- =========================
+         TRANSPORT
+    ========================== -->
+          <div class="price-delivery reveal-item">
+            <span class="price-delivery__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M12 21s6-5.4 6-11A6 6 0 1 0 6 10c0 5.6 6 11 6 11Z"
+                ></path>
+                <circle cx="12" cy="10" r="2"></circle>
+              </svg>
+            </span>
+
+            <p>
+              Doprava nad 10 km od Chlumce nad Cidlinou:
+              <strong>15 Kč/km.</strong>
+            </p>
+
+            <span class="price-delivery__line"></span>
+
+            <span class="price-delivery__car">
+              <svg viewBox="0 0 46 24" aria-hidden="true">
+                <path d="M3 17h28"></path>
+                <path d="M8 17V7h20l6 6h6v4h-4"></path>
+                <path d="M28 8v5h6"></path>
+                <circle cx="12" cy="18" r="3"></circle>
+                <circle cx="34" cy="18" r="3"></circle>
+              </svg>
+            </span>
+          </div>
+        </div>
+      </section>
+      <section
+        class="section price-guarantee"
+        data-reveal-section
+        data-price-guarantee
+      >
+        <div
+          class="price-guarantee__glow"
+          data-guarantee-glow
+          aria-hidden="true"
+        ></div>
+
+        <div class="container price-guarantee__container">
+          <!-- LARGE BACKGROUND TEXT -->
+          <div
+            class="price-guarantee__background-number"
+            aria-hidden="true"
+            data-guarantee-number
+          >
+            1 000 000
+          </div>
+
+          <!-- FLOATING STATEMENTS -->
+          <div
+            class="price-guarantee__statement price-guarantee__statement--01 reveal-item"
+          >
+            <span class="price-guarantee__statement-index"> 01 </span>
+
+            <span class="price-guarantee__statement-line"></span>
+
+            <span class="price-guarantee__statement-dot"></span>
+
+            <span class="price-guarantee__statement-text">
+              ŽÁDNÉ SKRYTÉ POPLATKY
+            </span>
+          </div>
+
+          <div
+            class="price-guarantee__statement price-guarantee__statement--02 reveal-item"
+          >
+            <span class="price-guarantee__statement-index"> 02 </span>
+
+            <span class="price-guarantee__statement-line"></span>
+
+            <span class="price-guarantee__statement-dot"></span>
+
+            <span class="price-guarantee__statement-text">
+              HOTOVĚ · KARTOU · PŘEVODEM
+            </span>
+          </div>
+
+          <div
+            class="price-guarantee__statement price-guarantee__statement--03 reveal-item"
+          >
+            <span class="price-guarantee__statement-index"> 03 </span>
+
+            <span class="price-guarantee__statement-line"></span>
+
+            <span class="price-guarantee__statement-dot"></span>
+
+            <span class="price-guarantee__statement-text">
+              NEDOSTATKY ODSTRANÍME ZDARMA
+            </span>
+          </div>
+
+          <div
+            class="price-guarantee__statement price-guarantee__statement--04 reveal-item"
+          >
+            <span class="price-guarantee__statement-index"> 04 </span>
+
+            <span class="price-guarantee__statement-line"></span>
+
+            <span class="price-guarantee__statement-dot"></span>
+
+            <span class="price-guarantee__statement-text">
+              POJIŠTĚNÍ DO 1 000 000 Kč
+            </span>
+          </div>
+
+          <!-- CENTER -->
+          <div class="price-guarantee__center">
+            <div class="section-eyebrow price-guarantee__eyebrow reveal-item">
+              FÉROVĚ OD ZAČÁTKU
+            </div>
+
+            <!-- ROTATING SEAL -->
+            <div
+              class="price-guarantee__seal reveal-item"
+              data-guarantee-seal
+              aria-hidden="true"
+            >
+              <svg viewBox="0 0 200 200" class="price-guarantee__seal-svg">
+                <defs>
+                  <path
+                    id="guarantee-circle"
+                    d="
+                M 100,100
+                m -73,0
+                a 73,73 0 1,1 146,0
+                a 73,73 0 1,1 -146,0
+              "
+                  ></path>
+                </defs>
+
+                <text>
+                  <textPath href="#guarantee-circle" startOffset="0%">
+                    DAVAMA • ÚKLIDOVÉ SLUŽBY • FÉROVĚ • DAVAMA •
+                  </textPath>
+                </text>
+              </svg>
+
+              <span class="price-guarantee__seal-core">
+                <span></span>
+              </span>
+            </div>
+
+            <!-- MAIN TITLE -->
+            <h2 class="price-guarantee__title">
+              <span class="price-guarantee__title-line reveal-title-line">
+                ŽÁDNÉ
+              </span>
+
+              <span
+                class="price-guarantee__title-line price-guarantee__title-line--wipe reveal-title-line"
+              >
+                <span>SKRYTÉ</span>
+              </span>
+
+              <span class="price-guarantee__title-line reveal-title-line">
+                POPLATKY.
+              </span>
+            </h2>
+
+            <p class="price-guarantee__text reveal-item">
+              Platíte jen za reálně odpracovaný čas – nikdy ne za čas navíc.
+            </p>
+          </div>
+
+          <!-- SCANNER -->
+          <div class="price-guarantee__scanner reveal-item" aria-hidden="true">
+            <span class="price-guarantee__scanner-line"></span>
+
+            <span class="price-guarantee__scanner-dot"></span>
+
+            <span class="price-guarantee__scanner-label">
+              DAVAMA / FAIR SERVICE
+            </span>
+          </div>
+        </div>
+      </section>
+      <section
+        class="section process-section"
+        id="podminky-ceniku"
+        data-reveal-section
+      >
+        <div
+          class="section-bubbles"
+          data-section-bubbles
+          aria-hidden="true"
+        ></div>
+
+        <div class="container">
+          <!-- =====================================================
+         SECTION HEAD
+    ====================================================== -->
+
+          <header class="section-head section-head--center">
+            <div class="section-eyebrow reveal-item">Férové podmínky</div>
+
+            <h2 class="section-title process-section__title">
+              <span class="section-title__line reveal-title-line">
+                Vždy víte,
+              </span>
+
+              <span class="section-title__line reveal-title-line">
+                <span class="text-accent">za co platíte</span>
+              </span>
+            </h2>
+
+            <span class="section-divider reveal-item"></span>
+
+            <p class="section-description reveal-item">
+              Jasné ceny, žádné skryté poplatky a jistota, že se na nás můžete
+              spolehnout.
+            </p>
+          </header>
+
+          <!-- =====================================================
+         PROCESS / BENEFITS
+    ====================================================== -->
+
+          <div class="process">
+            <!-- ===================================================
+           01 — DOPRAVA
+      ==================================================== -->
+
+            <article class="process-item reveal-item" data-process-step>
+              <div class="process-item__top">
+                <span class="process-item__number">01</span>
+                <span class="process-item__pin"></span>
+              </div>
+
+              <div class="process-item__body">
+                <div
+                  class="process-triangle process-triangle--dark"
+                  data-process-triangle
+                >
+                  <!-- LOCATION / CAR -->
+                  <svg
+                    class="process-triangle__icon"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M12 21s6-5.4 6-11A6 6 0 1 0 6 10c0 5.6 6 11 6 11Z"
+                    ></path>
+
+                    <circle cx="12" cy="10" r="2.2"></circle>
+                  </svg>
+                </div>
+
+                <div class="process-item__content">
+                  <span class="process-item__accent"></span>
+
+                  <h3 class="process-item__title">
+                    Doprava<br />
+                    15 Kč/km
+                  </h3>
+
+                  <p class="process-item__text">
+                    Doprava nad 10 km od Chlumce nad Cidlinou: 15 Kč/km.
+                  </p>
+                </div>
+              </div>
+
+              <div class="process-connector" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </article>
+
+            <!-- ===================================================
+           02 — ŽÁDNÉ SKRYTÉ POPLATKY
+      ==================================================== -->
+
+            <article class="process-item reveal-item" data-process-step>
+              <div class="process-item__top process-item__top--accent">
+                <span class="process-item__number">02</span>
+                <span class="process-item__pin"></span>
+              </div>
+
+              <div class="process-item__body">
+                <div
+                  class="process-triangle process-triangle--accent"
+                  data-process-triangle
+                >
+                  <!-- RECEIPT / PRICE -->
+                  <svg
+                    class="process-triangle__icon"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M6 3.5h12v17l-2-1.4-2 1.4-2-1.4-2 1.4-2-1.4-2 1.4v-17Z"
+                    ></path>
+
+                    <path d="M9 8h6"></path>
+                    <path d="M9 12h6"></path>
+                    <path d="M9 16h3"></path>
+                  </svg>
+                </div>
+
+                <div class="process-item__content">
+                  <span class="process-item__accent"></span>
+
+                  <h3 class="process-item__title">
+                    Žádné skryté<br />
+                    poplatky
+                  </h3>
+
+                  <p class="process-item__text">
+                    Platíte jen za reálně odpracovaný čas – nikdy ne za čas
+                    navíc.
+                  </p>
+                </div>
+              </div>
+
+              <div class="process-connector" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </article>
+
+            <!-- ===================================================
+           03 — PLATBA
+      ==================================================== -->
+
+            <article class="process-item reveal-item" data-process-step>
+              <div class="process-item__top process-item__top--muted">
+                <span class="process-item__number">03</span>
+                <span class="process-item__pin"></span>
+              </div>
+
+              <div class="process-item__body">
+                <div
+                  class="process-triangle process-triangle--muted"
+                  data-process-triangle
+                >
+                  <!-- CARD -->
+                  <svg
+                    class="process-triangle__icon"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <rect x="3.5" y="6" width="17" height="12" rx="2"></rect>
+
+                    <path d="M3.5 10h17"></path>
+                    <path d="M7 14.5h4"></path>
+                  </svg>
+                </div>
+
+                <div class="process-item__content">
+                  <span class="process-item__accent"></span>
+
+                  <h3 class="process-item__title">
+                    Platba<br />
+                    podle vás
+                  </h3>
+
+                  <p class="process-item__text">
+                    Platit můžete hotově, kartou nebo převodem.
+                  </p>
+                </div>
+              </div>
+
+              <div class="process-connector" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </article>
+
+            <!-- ===================================================
+           04 — ZÁRUKA SPOKOJENOSTI
+      ==================================================== -->
+
+            <article class="process-item reveal-item" data-process-step>
+              <div class="process-item__top process-item__top--accent">
+                <span class="process-item__number">04</span>
+                <span class="process-item__pin"></span>
+              </div>
+
+              <div class="process-item__body">
+                <div
+                  class="process-triangle process-triangle--accent"
+                  data-process-triangle
+                >
+                  <!-- CHECK / GUARANTEE -->
+                  <svg
+                    class="process-triangle__icon"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M12 3.5 19 6v5.1c0 4.4-2.8 7.7-7 9.4-4.2-1.7-7-5-7-9.4V6l7-2.5Z"
+                    ></path>
+
+                    <path d="m8.6 12 2.1 2.1 4.8-5"></path>
+                  </svg>
+                </div>
+
+                <div class="process-item__content">
+                  <span class="process-item__accent"></span>
+
+                  <h3 class="process-item__title">
+                    Záruka<br />
+                    spokojenosti
+                  </h3>
+
+                  <p class="process-item__text">
+                    Pokud nebudete s výsledkem spokojeni, nedostatky odstraníme
+                    zdarma.
+                  </p>
+                </div>
+              </div>
+
+              <div class="process-connector" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </article>
+
+            <!-- ===================================================
+           05 — POJIŠTĚNÍ
+      ==================================================== -->
+
+            <article class="process-item reveal-item" data-process-step>
+              <div class="process-item__top">
+                <span class="process-item__number">05</span>
+                <span class="process-item__pin"></span>
+              </div>
+
+              <div class="process-item__body">
+                <div
+                  class="process-triangle process-triangle--dark"
+                  data-process-triangle
+                >
+                  <!-- SHIELD -->
+                  <svg
+                    class="process-triangle__icon"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="
+                  M12 3
+                  19 5.7
+                  v5.1
+                  c0 4.6-2.8 8-7 10.2
+                  -4.2-2.2-7-5.6-7-10.2
+                  V5.7
+                  L12 3Z
+                "
+                    ></path>
+
+                    <path d="M9 12.1 11.1 14 15.5 9.5"></path>
+                  </svg>
+                </div>
+
+                <div class="process-item__content">
+                  <span class="process-item__accent"></span>
+
+                  <h3 class="process-item__title">
+                    Pojištění<br />
+                    1 000 000 Kč
+                  </h3>
+
+                  <p class="process-item__text">
+                    Máme pojištění odpovědnosti za škodu až do výše 1 000 000
+                    Kč.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- =====================================================
+         CTA
+    ====================================================== -->
+
+          <div class="section-actions reveal-item">
+            <a
+              class="btn btn--primary hero__primary process-section__cta"
+              href="#poptavka"
+            >
+              <span>Nezávazná poptávka</span>
+
+              <span class="services-cta__arrow">
+                <svg viewBox="0 0 44 24" aria-hidden="true">
+                  <path d="M2 12H40"></path>
+                  <path d="M34 6L40 12L34 18"></path>
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section
+        class="marquee-section"
+        aria-label="Ceny a férové podmínky DAVAMA"
+      >
+        <div class="marquee" data-marquee>
+          <div class="marquee__track">
+            <!-- =====================================================
+           GROUP 01
+      ====================================================== -->
+            <div class="marquee__group">
+              <!-- 01 -->
+              <div class="marquee__item">
+                <svg
+                  class="marquee__icon"
+                  viewBox="0 0 48 48"
+                  aria-hidden="true"
+                >
+                  <path d="M10 8h28v32H10z"></path>
+                  <path d="M16 16h16"></path>
+                  <path d="M16 23h16"></path>
+                  <path d="M16 30h10"></path>
+                </svg>
+
+                <span>Žádné skryté poplatky</span>
+              </div>
+
+              <span class="marquee__dot"></span>
+
+              <!-- 02 -->
+              <div class="marquee__item marquee__item--accent">
+                <svg
+                  class="marquee__icon"
+                  viewBox="0 0 48 48"
+                  aria-hidden="true"
+                >
+                  <circle cx="24" cy="24" r="16"></circle>
+
+                  <path d="M24 14v20"></path>
+                  <path
+                    d="M30 18c-1.5-2-3.4-3-6-3-3.5 0-6 1.8-6 4.5 0 7 12 2.5 12 9 0 2.7-2.5 4.5-6 4.5-2.8 0-5-1.1-6.5-3.1"
+                  ></path>
+                </svg>
+
+                <span>Platíte jen odpracovaný čas</span>
+              </div>
+
+              <span class="marquee__dot"></span>
+
+              <!-- 03 -->
+              <div class="marquee__item">
+                <svg
+                  class="marquee__icon"
+                  viewBox="0 0 48 48"
+                  aria-hidden="true"
+                >
+                  <rect x="7" y="12" width="34" height="24" rx="4"></rect>
+
+                  <path d="M7 19h34"></path>
+                  <path d="M13 29h10"></path>
+                </svg>
+
+                <span>Hotově · kartou · převodem</span>
+              </div>
+
+              <span class="marquee__dot"></span>
+
+              <!-- 04 -->
+              <div class="marquee__item marquee__item--accent">
+                <svg
+                  class="marquee__icon"
+                  viewBox="0 0 48 48"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M24 6 38 11v10.2C38 30 32.4 36.6 24 40c-8.4-3.4-14-10-14-18.8V11L24 6Z"
+                  ></path>
+
+                  <path d="m17 24 4.5 4.5L32 18"></path>
+                </svg>
+
+                <span>Záruka spokojenosti</span>
+              </div>
+
+              <span class="marquee__dot"></span>
+
+              <!-- 05 -->
+              <div class="marquee__item">
+                <svg
+                  class="marquee__icon"
+                  viewBox="0 0 48 48"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M24 6 38 11v10c0 9-5.5 15.5-14 19-8.5-3.5-14-10-14-19V11L24 6Z"
+                  ></path>
+
+                  <path d="M24 16v9"></path>
+                  <path d="M24 31h.01"></path>
+                </svg>
+
+                <span>Pojištění do 1 000 000 Kč</span>
+              </div>
+
+              <span class="marquee__dot"></span>
+
+              <!-- 06 -->
+              <div class="marquee__item marquee__item--accent">
+                <svg
+                  class="marquee__icon"
+                  viewBox="0 0 48 48"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M24 42s12-10.8 12-22A12 12 0 1 0 12 20c0 11.2 12 22 12 22Z"
+                  ></path>
+
+                  <circle cx="24" cy="20" r="4"></circle>
+                </svg>
+
+                <span>Doprava nad 10 km · 15 Kč/km</span>
+              </div>
+
+              <span class="marquee__dot"></span>
+
+              <!-- 07 -->
+              <div class="marquee__item">
+                <svg
+                  class="marquee__icon"
+                  viewBox="0 0 48 48"
+                  aria-hidden="true"
+                >
+                  <path d="M8 34 20 22l7 7 13-15"></path>
+                  <path d="M31 14h9v9"></path>
+                </svg>
+
+                <span>Cena podle rozsahu a náročnosti</span>
+              </div>
+
+              <span class="marquee__dot"></span>
+            </div>
+
+            <!-- =====================================================
+           GROUP 02 — DUPLICATE FOR SEAMLESS LOOP
+      ====================================================== -->
+            <div class="marquee__group" aria-hidden="true">
+              <!-- 01 -->
+              <div class="marquee__item">
+                <svg class="marquee__icon" viewBox="0 0 48 48">
+                  <path d="M10 8h28v32H10z"></path>
+                  <path d="M16 16h16"></path>
+                  <path d="M16 23h16"></path>
+                  <path d="M16 30h10"></path>
+                </svg>
+
+                <span>Žádné skryté poplatky</span>
+              </div>
+
+              <span class="marquee__dot"></span>
+
+              <!-- 02 -->
+              <div class="marquee__item marquee__item--accent">
+                <svg class="marquee__icon" viewBox="0 0 48 48">
+                  <circle cx="24" cy="24" r="16"></circle>
+
+                  <path d="M24 14v20"></path>
+                  <path
+                    d="M30 18c-1.5-2-3.4-3-6-3-3.5 0-6 1.8-6 4.5 0 7 12 2.5 12 9 0 2.7-2.5 4.5-6 4.5-2.8 0-5-1.1-6.5-3.1"
+                  ></path>
+                </svg>
+
+                <span>Platíte jen odpracovaný čas</span>
+              </div>
+
+              <span class="marquee__dot"></span>
+
+              <!-- 03 -->
+              <div class="marquee__item">
+                <svg class="marquee__icon" viewBox="0 0 48 48">
+                  <rect x="7" y="12" width="34" height="24" rx="4"></rect>
+
+                  <path d="M7 19h34"></path>
+                  <path d="M13 29h10"></path>
+                </svg>
+
+                <span>Hotově · kartou · převodem</span>
+              </div>
+
+              <span class="marquee__dot"></span>
+
+              <!-- 04 -->
+              <div class="marquee__item marquee__item--accent">
+                <svg class="marquee__icon" viewBox="0 0 48 48">
+                  <path
+                    d="M24 6 38 11v10.2C38 30 32.4 36.6 24 40c-8.4-3.4-14-10-14-18.8V11L24 6Z"
+                  ></path>
+
+                  <path d="m17 24 4.5 4.5L32 18"></path>
+                </svg>
+
+                <span>Záruka spokojenosti</span>
+              </div>
+
+              <span class="marquee__dot"></span>
+
+              <!-- 05 -->
+              <div class="marquee__item">
+                <svg class="marquee__icon" viewBox="0 0 48 48">
+                  <path
+                    d="M24 6 38 11v10c0 9-5.5 15.5-14 19-8.5-3.5-14-10-14-19V11L24 6Z"
+                  ></path>
+
+                  <path d="M24 16v9"></path>
+                  <path d="M24 31h.01"></path>
+                </svg>
+
+                <span>Pojištění do 1 000 000 Kč</span>
+              </div>
+
+              <span class="marquee__dot"></span>
+
+              <!-- 06 -->
+              <div class="marquee__item marquee__item--accent">
+                <svg class="marquee__icon" viewBox="0 0 48 48">
+                  <path
+                    d="M24 42s12-10.8 12-22A12 12 0 1 0 12 20c0 11.2 12 22 12 22Z"
+                  ></path>
+
+                  <circle cx="24" cy="20" r="4"></circle>
+                </svg>
+
+                <span>Doprava nad 10 km · 15 Kč/km</span>
+              </div>
+
+              <span class="marquee__dot"></span>
+
+              <!-- 07 -->
+              <div class="marquee__item">
+                <svg class="marquee__icon" viewBox="0 0 48 48">
+                  <path d="M8 34 20 22l7 7 13-15"></path>
+                  <path d="M31 14h9v9"></path>
+                </svg>
+
+                <span>Cena podle rozsahu a náročnosti</span>
+              </div>
+
+              <span class="marquee__dot"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section contact-mini" id="kontakt" data-reveal-section>
+        <div
+          class="section-bubbles contact-mini__bubbles"
+          data-section-bubbles
+          aria-hidden="true"
+        ></div>
+
+        <div class="contact-mini__brand" aria-hidden="true">DAVAMA</div>
+
+        <div class="container contact-mini__container">
+          <div class="contact-mini__info">
+            <header class="section-head contact-mini__head">
+              <div class="section-eyebrow reveal-item">Kontakt</div>
+
+              <h2 class="section-title contact-mini__title reveal-item">
+                <span class="section-title__line"> Spojte se </span>
+
+                <span class="section-title__line">
+                  <span class="text-accent">s námi.</span>
+                </span>
+              </h2>
+
+              <p
+                class="section-description contact-mini__description reveal-item"
+              >
+                Napište, zavolejte nebo přijďte rovnou k věci přes WhatsApp –
+                ozveme se co nejdřív.
+              </p>
+            </header>
+
+            <!-- QUICK CONTACTS -->
+            <div class="contact-mini__links">
+              <a
+                class="contact-mini__link reveal-item"
+                href="tel:+420736751437"
+              >
+                <span class="contact-mini__icon">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M7.3 3.5 9.6 3c.6-.1 1.2.2 1.4.8l1.2 3c.2.6 0 1.2-.5 1.6l-1.6 1.1a14.3 14.3 0 0 0 4.4 4.4l1.1-1.6c.4-.5 1-.7 1.6-.5l3 1.2c.6.2.9.8.8 1.4l-.5 2.3c-.2.9-1 1.5-1.9 1.5C11.2 18.2 5.8 12.8 5.8 5.4c0-.9.6-1.7 1.5-1.9Z"
+                    />
+                  </svg>
+                </span>
+
+                <span>
+                  <small>Telefon</small>
+                  <strong>+420 736 751 437</strong>
+                </span>
+              </a>
+
+              <a
+                class="contact-mini__link reveal-item"
+                href="mailto:davama_uklid@seznam.cz"
+              >
+                <span class="contact-mini__icon">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                    <path d="m4 7 8 6 8-6"></path>
+                  </svg>
+                </span>
+
+                <span>
+                  <small>E-mail</small>
+                  <strong>davama_uklid@seznam.cz</strong>
+                </span>
+              </a>
+            </div>
+
+            <a
+              class="btn btn--primary hero__primary"
+              href="https://wa.me/420736751437"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M12 2.1a9.65 9.65 0 0 0-8.26 14.65L2.5 21.5l4.86-1.27A9.7 9.7 0 1 0 12 2.1Zm0 17.54a7.9 7.9 0 0 1-4.03-1.1l-.29-.17-2.88.75.77-2.8-.19-.3A7.92 7.92 0 1 1 12 19.64Zm4.34-5.91c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.92-1.19-.71-.63-1.19-1.41-1.33-1.65-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.19-.46-.39-.4-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.69 2.58 4.1 3.62.57.25 1.02.4 1.37.51.58.18 1.1.16 1.51.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28Z"
+                ></path>
+              </svg>
+
+              <span>Nezávazná poptávka</span>
+            </a>
+          </div>
+
+          <div class="contact-mini__form-wrap reveal-item">
+            <div class="contact-mini__form-head">
+              <span>Nezávazná</span>
+
+              <h3>Poptávka<span>.</span></h3>
+            </div>
+
+            <form
+              class="contact-form"
+              id="contact-form"
+              action="#"
+              method="post"
+            >
+              <input type="hidden" name="service" data-service-input value="" />
+
+              <div class="contact-form__row">
+                <label class="form-field">
+                  <span class="form-field__label"> Jméno <em>*</em> </span>
+
+                  <input type="text" name="name" autocomplete="name" required />
+                </label>
+
+                <label class="form-field">
+                  <span class="form-field__label"> Telefon <em>*</em> </span>
+
+                  <input type="tel" name="phone" autocomplete="tel" required />
+                </label>
+              </div>
+
+              <label class="form-field">
+                <span class="form-field__label"> Adresa <em>*</em> </span>
+
+                <input
+                  type="text"
+                  name="address"
+                  autocomplete="street-address"
+                  required
+                />
+              </label>
+
+              <label class="form-field">
+                <span class="form-field__label"> Zpráva </span>
+
+                <textarea
+                  name="message"
+                  rows="4"
+                  placeholder="Co byste potřebovali uklidit a kdy?"
+                ></textarea>
+              </label>
+
+              <label class="contact-form__consent">
+                <input type="checkbox" name="privacy" required />
+
+                <span class="contact-form__checkbox"></span>
+
+                <span>
+                  Souhlasím se zpracováním osobních údajů
+                  <em>*</em>
+                </span>
+              </label>
+
+              <button
+                class="btn btn--primary contact-form__submit"
+                type="submit"
+              >
+                <span>Odeslat poptávku</span>
+
+                <span class="contact-form__submit-arrow">
+                  <svg viewBox="0 0 44 24" aria-hidden="true">
+                    <path d="M2 12H40"></path>
+                    <path d="M34 6L40 12L34 18"></path>
+                  </svg>
+                </span>
+              </button>
+
+              <p class="contact-form__note">
+                Děkujeme a ozveme se vám do 5 hodin.
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="image-message section" data-reveal-section>
+        <div class="image-message__media" aria-hidden="true">
+          <img
+            src="assets/services/111.png"
+            alt=""
+            class="image-message__image"
+          />
+        </div>
+
+        <div class="image-message__shade" aria-hidden="true"></div>
+
+        <div
+          class="section-bubbles image-message__bubbles"
+          data-section-bubbles
+          aria-hidden="true"
+        ></div>
+
+        <div class="container image-message__container">
+          <div class="image-message__content">
+            <div class="section-eyebrow image-message__eyebrow reveal-item">
+              <span class="hero__eyebrow-dot"></span>
+              DAVAMA
+            </div>
+
+            <h2 class="image-message__title">
+              <span class="image-message__line reveal-item">
+                VY SI UŽÍVEJTE
+              </span>
+
+              <span class="image-message__line reveal-item"> SVŮJ ČAS. </span>
+
+              <span
+                class="image-message__line image-message__line--accent reveal-item"
+              >
+                O ÚKLID
+              </span>
+
+              <span
+                class="image-message__line image-message__line--accent reveal-item"
+              >
+                SE POSTARÁME MY.
+              </span>
+            </h2>
+
+            <p class="image-message__text reveal-item">
+              Vy si užijte svůj čas. Čistotu nechte na nás.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- =========================
+     DAVAMA / COMPACT FOOTER
+========================= -->
+    <footer class="site-footer">
+      <!-- decorative bubble -->
+      <span class="site-footer__bubble" aria-hidden="true"></span>
+
+      <div class="container">
+        <div class="site-footer__main">
+          <!-- LOGO -->
+          <div class="site-footer__brand">
+            <a href="/" class="site-footer__logo" aria-label="DAVAMA">
+              <img src="assets/logo.png" alt="DAVAMA" />
+            </a>
+
+            <span class="site-footer__brand-text"> ÚKLIDOVÉ SLUŽBY </span>
+          </div>
+
+          <!-- LINKS -->
+          <div class="site-footer__pages">
+            <nav class="site-footer__nav">
+              <a href="obchodni-podminky.html" class="site-footer__link">
+                <span>Obchodní podmínky</span>
+                <span class="site-footer__arrow">↗</span>
+              </a>
+
+              <a href="ochrana-osobnich-udaju.html" class="site-footer__link">
+                <span>Ochrana osobních údajů</span>
+                <span class="site-footer__arrow">↗</span>
+              </a>
+
+              <a href="zasady-cookies.html" class="site-footer__link">
+                <span>Zásady cookies</span>
+                <span class="site-footer__arrow">↗</span>
+              </a>
+            </nav>
+          </div>
+        </div>
+
+        <!-- BOTTOM -->
+        <div class="site-footer__bottom">
+          <div class="site-footer__safe">
+            <span class="site-footer__check">✓</span>
+
+            <div>
+              <strong>VAŠE ÚDAJE JSOU V BEZPEČÍ.</strong>
+              <span>Zpracováváme je v souladu s GDPR.</span>
+            </div>
+          </div>
+
+          <div class="site-footer__copy">
+            <span>© 2026 DAVAMA</span>
+            <span>Všechna práva vyhrazena.</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="app.js" defer></script>
+    <script>
+      /* =========================================================
+   PRICE LIST — MOBILE ACCORDION
+========================================================= */
+
+      function initPriceList() {
+        const section = document.querySelector("[data-price-list]");
+
+        if (!section) return;
+
+        const cards = [...section.querySelectorAll("[data-price-card]")];
+
+        const mobileQuery = window.matchMedia("(max-width: 767px)");
+
+        const openCard = (card) => {
+          const button = card.querySelector("[data-price-toggle]");
+
+          const body = card.querySelector("[data-price-body]");
+
+          if (!button || !body) return;
+
+          card.classList.add("is-open");
+
+          button.setAttribute("aria-expanded", "true");
+
+          body.style.maxHeight = `${body.scrollHeight}px`;
+        };
+
+        const closeCard = (card) => {
+          const button = card.querySelector("[data-price-toggle]");
+
+          const body = card.querySelector("[data-price-body]");
+
+          if (!button || !body) return;
+
+          card.classList.remove("is-open");
+
+          button.setAttribute("aria-expanded", "false");
+
+          body.style.maxHeight = "0px";
+        };
+
+        const setup = () => {
+          if (!mobileQuery.matches) {
+            cards.forEach((card) => {
+              card.classList.remove("is-open");
+
+              const body = card.querySelector("[data-price-body]");
+
+              const button = card.querySelector("[data-price-toggle]");
+
+              if (body) {
+                body.style.maxHeight = "";
+              }
+
+              button?.setAttribute("aria-expanded", "true");
+            });
+
+            return;
+          }
+
+          cards.forEach((card, index) => {
+            /*
+             * На mobile першу категорію
+             * відкриваємо одразу.
+             */
+
+            if (index === 0) {
+              openCard(card);
+            } else {
+              closeCard(card);
+            }
+          });
+        };
+
+        cards.forEach((card) => {
+          const button = card.querySelector("[data-price-toggle]");
+
+          if (!button) return;
+
+          button.addEventListener("click", () => {
+            if (!mobileQuery.matches) {
+              return;
+            }
+
+            const isOpen = card.classList.contains("is-open");
+
+            /*
+             * Закриваємо інші —
+             * чистий accordion.
+             */
+
+            cards.forEach((otherCard) => {
+              if (otherCard !== card) {
+                closeCard(otherCard);
+              }
+            });
+
+            if (isOpen) {
+              closeCard(card);
+            } else {
+              openCard(card);
+            }
+          });
+        });
+
+        setup();
+
+        mobileQuery.addEventListener("change", setup);
+      }
+
+      initPriceList();
+
+      /* =========================================================
+   PRICE GUARANTEE
+========================================================= */
+
+      function initPriceGuarantee() {
+        const section = document.querySelector("[data-price-guarantee]");
+
+        if (!section) return;
+
+        const glow = section.querySelector("[data-guarantee-glow]");
+
+        const number = section.querySelector("[data-guarantee-number]");
+
+        const statements = [
+          ...section.querySelectorAll(".price-guarantee__statement"),
+        ];
+
+        const canHover = window.matchMedia(
+          "(hover: hover) and (pointer: fine)",
+        ).matches;
+
+        const reducedMotion = window.matchMedia(
+          "(prefers-reduced-motion: reduce)",
+        ).matches;
+
+        if (!canHover || reducedMotion) {
+          return;
+        }
+
+        let frame = null;
+
+        section.addEventListener("mousemove", (event) => {
+          const rect = section.getBoundingClientRect();
+
+          const x = event.clientX - rect.left;
+
+          const y = event.clientY - rect.top;
+
+          const xRatio = x / rect.width - 0.5;
+
+          const yRatio = y / rect.height - 0.5;
+
+          if (frame) {
+            cancelAnimationFrame(frame);
+          }
+
+          frame = requestAnimationFrame(() => {
+            /* glow */
+
+            section.style.setProperty("--glow-x", `${x}px`);
+
+            section.style.setProperty("--glow-y", `${y}px`);
+
+            /* huge number */
+
+            if (number) {
+              number.style.setProperty("--number-shift", `${xRatio * 35}px`);
+            }
+
+            /* floating statements */
+
+            statements.forEach((statement, index) => {
+              const strength = 3 + index * 1.4;
+
+              statement.style.translate = `
+                ${xRatio * strength}px
+                ${yRatio * strength}px
+              `;
+            });
+          });
+        });
+
+        section.addEventListener("mouseleave", () => {
+          statements.forEach((statement) => {
+            statement.style.translate = "";
+          });
+
+          if (number) {
+            number.style.removeProperty("--number-shift");
+          }
+        });
+      }
+
+      initPriceGuarantee();
+    </script>
+  </body>
+</html>
