@@ -1,0 +1,737 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Rady a tipy | DAVAMA Úklidové služby</title>
+    <meta
+      name="description"
+      content="Praktické rady z terénu od DAVAMA. Podzimní úklid domácnosti krok za krokem: okna, koberce, matrace, skříně, kuchyň i koupelna."
+    />
+    <link rel="canonical" href="https://example.com/rady-a-tipy.html" />
+    <meta property="og:title" content="Rady a tipy | DAVAMA" />
+    <meta
+      property="og:description"
+      content="Praktické rady z terénu – co funguje a jak si usnadnit úklid mezi našimi návštěvami."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://example.com/rady-a-tipy.html" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="tips-page-body">
+    <header class="site-header" data-header>
+      <div class="container nav__inner">
+        <!-- LOGO -->
+        <a class="nav__logo" href="index.html" aria-label="DAVAMA – domů">
+          <img
+            src="assets/logo.png"
+            alt="DAVAMA Úklidové služby"
+            width="210"
+            height="53"
+          />
+        </a>
+
+        <!-- DESKTOP NAV -->
+        <nav class="nav nav--desktop" aria-label="Hlavní navigace">
+          <!-- DOMŮ -->
+          <a class="nav__link" href="index.html"> Domů </a>
+
+          <!-- SLUŽBY -->
+          <div class="nav__item nav__item--dropdown">
+            <button
+              class="nav__link nav__link--button"
+              type="button"
+              aria-expanded="false"
+              aria-controls="services-menu"
+            >
+              Služby
+
+              <span class="nav__chevron" aria-hidden="true"></span>
+            </button>
+
+            <div class="dropdown" id="services-menu" role="menu">
+              <a role="menuitem" href="generalni-uklid.html">
+                Generální úklid
+              </a>
+
+              <a role="menuitem" href="pravidelny-uklid.html">
+                Pravidelný úklid
+              </a>
+
+              <a role="menuitem" href="postavebni-uklid.html">
+                Postavební úklid
+              </a>
+
+              <a role="menuitem" href="myti-oken.html"> Mytí oken </a>
+
+              <a role="menuitem" href="chemicke-cisteni.html">
+                Chemické čištění
+              </a>
+
+              <a role="menuitem" href="dalsi-sluzby.html"> Doplňkové služby </a>
+            </div>
+          </div>
+
+          <!-- GALERIE -->
+          <div class="nav__item nav__item--dropdown">
+            <button
+              class="nav__link nav__link--button"
+              type="button"
+              aria-expanded="false"
+              aria-controls="gallery-menu"
+            >
+              Galerie
+
+              <span class="nav__chevron" aria-hidden="true"></span>
+            </button>
+
+            <div
+              class="dropdown dropdown--compact"
+              id="gallery-menu"
+              role="menu"
+            >
+              <a role="menuitem" href="pred-po.html"> Před / Po </a>
+            </div>
+          </div>
+
+          <!-- O NÁS -->
+          <!-- O NÁS / INFORMACE -->
+          <div class="nav__item nav__item--dropdown">
+            <button
+              class="nav__link nav__link--button"
+              type="button"
+              aria-expanded="false"
+              aria-controls="about-menu"
+            >
+              O nás
+
+              <span class="nav__chevron" aria-hidden="true"></span>
+            </button>
+
+            <div class="dropdown dropdown--compact" id="about-menu" role="menu">
+              <a role="menuitem" href="o-nas.html"> O nás </a>
+
+              <a role="menuitem" href="pro-firmy.html"> Pro firmy </a>
+
+              <a role="menuitem" href="rady-a-tipy.html"> Rady a tipy </a>
+            </div>
+          </div>
+
+          <!-- CENÍK -->
+          <a class="nav__link" href="cenik.html"> Ceník </a>
+
+          <!-- KONTAKT -->
+          <a class="nav__link" href="kontakt.html"> Kontakt </a>
+        </nav>
+
+        <!-- MAIN CTA -->
+        <a
+          class="btn btn--primary nav__cta"
+          href="https://wa.me/420736751437?text=Dobr%C3%BD%20den%2C%20m%C3%A1m%20z%C3%A1jem%20o%20%C3%BAklidov%C3%A9%20slu%C5%BEby."
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Poptat úklid přes WhatsApp"
+        >
+          <span>Nezávazná poptávka</span>
+
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M12 2.1a9.65 9.65 0 0 0-8.26 14.65L2.5 21.5l4.86-1.27A9.7 9.7 0 1 0 12 2.1Zm0 17.54a7.9 7.9 0 0 1-4.03-1.1l-.29-.17-2.88.75.77-2.8-.19-.3A7.92 7.92 0 1 1 12 19.64Zm4.34-5.91c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.92-1.19-.71-.63-1.19-1.41-1.33-1.65-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.19-.46-.39-.4-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.69 2.58 4.1 3.62.57.25 1.02.4 1.37.51.58.18 1.1.16 1.51.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28Z"
+            />
+          </svg>
+        </a>
+
+        <!-- MOBILE BURGER -->
+        <button
+          class="burger"
+          type="button"
+          aria-label="Otevřít menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          data-menu-toggle
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <div
+      class="mobile-nav"
+      id="mobile-menu"
+      aria-hidden="true"
+      data-mobile-menu
+    >
+      <div class="mobile-nav__decor" aria-hidden="true">
+        <span class="bubble bubble--1"></span>
+        <span class="bubble bubble--2"></span>
+        <span class="bubble bubble--3"></span>
+        <span class="bubble bubble--4"></span>
+      </div>
+
+      <div class="mobile-nav__top container">
+        <a
+          class="mobile-nav__logo"
+          href="index.html"
+          aria-label="DAVAMA – domů"
+        >
+          <img
+            src="assets/logo.png"
+            alt="DAVAMA Úklidové služby"
+            width="210"
+            height="53"
+          />
+        </a>
+
+        <button
+          class="burger burger--overlay"
+          type="button"
+          aria-label="Zavřít menu"
+          aria-expanded="true"
+          aria-controls="mobile-menu"
+          data-menu-close
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+      <nav class="mobile-nav__content container" aria-label="Mobilní navigace">
+        <a class="mobile-nav__link" href="index.html"> Domů </a>
+
+        <details class="mobile-nav__group">
+          <summary class="mobile-nav__link">
+            Služby
+            <i class="mobile-nav__arrow" aria-hidden="true"></i>
+          </summary>
+
+          <div class="mobile-nav__submenu">
+            <a href="generalni-uklid.html"> Generální úklid </a>
+
+            <a href="pravidelny-uklid.html"> Pravidelný úklid </a>
+
+            <a href="postavebni-uklid.html"> Postavební úklid </a>
+
+            <a href="myti-oken.html"> Mytí oken </a>
+
+            <a href="chemicke-cisteni.html"> Chemické čištění </a>
+
+            <a href="dalsi-sluzby.html"> Doplňkové služby </a>
+          </div>
+        </details>
+
+        <details class="mobile-nav__group">
+          <summary class="mobile-nav__link">
+            Galerie
+            <i class="mobile-nav__arrow" aria-hidden="true"></i>
+          </summary>
+
+          <div class="mobile-nav__submenu">
+            <a href="pred-po.html"> Před / Po </a>
+          </div>
+        </details>
+
+        <!-- O NÁS -->
+        <details class="mobile-nav__group">
+          <summary class="mobile-nav__link">
+            O nás
+            <i class="mobile-nav__arrow" aria-hidden="true"></i>
+          </summary>
+
+          <div class="mobile-nav__submenu">
+            <a href="o-nas.html"> O nás </a>
+
+            <a href="pro-firmy.html"> Pro firmy </a>
+
+            <a href="rady-a-tipy.html"> Rady a tipy </a>
+          </div>
+        </details>
+
+        <a class="mobile-nav__link" href="cenik.html"> Ceník </a>
+
+        <a class="mobile-nav__link" href="kontakt.html"> Kontakt </a>
+
+        <a
+          class="btn btn--primary nav__cta"
+          href="https://wa.me/420736751437?text=Dobr%C3%BD%20den%2C%20m%C3%A1m%20z%C3%A1jem%20o%20%C3%BAklidov%C3%A9%20slu%C5%BEby."
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Poptat úklid přes WhatsApp"
+        >
+          <span>Nezávazná poptávka</span>
+
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M12 2.1a9.65 9.65 0 0 0-8.26 14.65L2.5 21.5l4.86-1.27A9.7 9.7 0 1 0 12 2.1Zm0 17.54a7.9 7.9 0 0 1-4.03-1.1l-.29-.17-2.88.75.77-2.8-.19-.3A7.92 7.92 0 1 1 12 19.64Zm4.34-5.91c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.92-1.19-.71-.63-1.19-1.41-1.33-1.65-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.19-.46-.39-.4-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.69 2.58 4.1 3.62.57.25 1.02.4 1.37.51.58.18 1.1.16 1.51.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28Z"
+            ></path>
+          </svg>
+        </a>
+      </nav>
+    </div>
+
+    <main class="tips-page">
+      <section class="hero" id="domu">
+        <div class="hero__media" aria-hidden="true">
+          <img class="hero__image" src="assets/tipy.png" alt="" />
+        </div>
+
+        <div class="hero__shade" aria-hidden="true"></div>
+
+        <div class="container hero__container">
+          <div class="hero__content">
+            <div class="hero__eyebrow">
+              <span class="hero__eyebrow-dot"></span>
+              <span>Rady a tipy · DAVAMA úklidové služby</span>
+            </div>
+
+            <h1 class="hero__title">
+              <span class="hero__title-line">
+                <span class="hero__title-word">PRAKTICKÉ RADY</span>
+              </span>
+
+              <span class="hero__title-line hero__title-line--accent">
+                <span class="hero__title-word">Z TERÉNU</span>
+              </span>
+
+              <span class="hero__title-line">
+                <span class="hero__title-word">PRO ČISTŠÍ DOMOV</span>
+              </span>
+            </h1>
+
+            <p class="hero__description">
+              Co při úklidu opravdu funguje, na co se často zapomíná a jak si
+              usnadnit péči o domácnost mezi našimi návštěvami. Sdílíme
+              zkušenosti, které každý den používáme v praxi.
+            </p>
+
+            <div class="hero__benefits">
+              <div class="hero-benefit">
+                <div class="hero-benefit__icon" aria-hidden="true">
+                  <div class="hero-benefit__icon-core">
+                    <svg viewBox="0 0 24 24">
+                      <circle cx="12" cy="12" r="7.5"></circle>
+                      <path d="M12 7.5v4.8l3.1 1.9"></path>
+                    </svg>
+                  </div>
+                </div>
+
+                <div class="hero-benefit__content">
+                  <strong>Tipy, které šetří čas</strong>
+                  <span>Jednodušší a efektivnější úklid</span>
+                </div>
+              </div>
+
+              <div class="hero-benefit">
+                <div class="hero-benefit__icon" aria-hidden="true">
+                  <div class="hero-benefit__icon-core">
+                    <svg viewBox="0 0 24 24">
+                      <path
+                        d="M12 3.5 19 6v5.1c0 4.4-2.8 7.7-7 9.4-4.2-1.7-7-5-7-9.4V6l7-2.5Z"
+                      ></path>
+                      <path d="m8.6 12 2.1 2.1 4.8-5"></path>
+                    </svg>
+                  </div>
+                </div>
+
+                <div class="hero-benefit__content">
+                  <strong>Ověřeno v praxi</strong>
+                  <span>Rady z každodenního úklidu</span>
+                </div>
+              </div>
+
+              <div class="hero-benefit">
+                <div class="hero-benefit__icon" aria-hidden="true">
+                  <div class="hero-benefit__icon-core">
+                    <svg viewBox="0 0 24 24">
+                      <circle cx="12" cy="8" r="3"></circle>
+                      <path
+                        d="M5.5 19.5c.9-3.7 3.1-5.4 6.5-5.4s5.6 1.7 6.5 5.4"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+
+                <div class="hero-benefit__content">
+                  <strong>Pro váš čistší domov</strong>
+                  <span>Bez zbytečné práce navíc</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero__actions">
+              <a class="btn btn--primary hero__primary" href="#clanek">
+                <span>Přečíst článek</span>
+              </a>
+
+              <a class="btn hero__secondary" href="#social">
+                <span>Sledujte nás</span>
+
+                <span class="services-cta__arrow">
+                  <svg viewBox="0 0 44 24" aria-hidden="true">
+                    <path d="M2 12H40"></path>
+                    <path d="M34 6L40 12L34 18"></path>
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__bubbles" data-hero-bubbles aria-hidden="true"></div>
+
+        <div class="hero__foam" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </section>
+      <section class="tips-article-section" id="clanek" data-reveal-section>
+        <div class="container tips-layout">
+          <aside class="tips-sidebar">
+            <div class="tips-sidebar__sticky">
+              <span class="tips-sidebar__label">DAVAMA / RADY A TIPY</span>
+
+              <div class="tips-sidebar__meta">
+                <span>Čtení</span>
+                <strong>5 min</strong>
+              </div>
+
+              <div class="tips-sidebar__rule"></div>
+
+              <p>
+                Praktické tipy, které vám pomohou udržet domácnost v lepší
+                kondici i mezi jednotlivými úklidy.
+              </p>
+            </div>
+          </aside>
+
+          <article class="tips-article">
+            <header class="tips-article__header">
+              <p class="tips-article__kicker">Sezónní úklid · domácnost</p>
+
+              <h1>
+                Podzimní úklid domácnosti: checklist, díky kterému na nic
+                nezapomenete
+              </h1>
+
+              <p class="tips-article__intro">
+                Podzim je tu a s ním ta neodbytná myšlenka: bylo by fajn to doma
+                pořádně provětrat, než se zavřeme na zimu se zataženými závěsy a
+                puštěným topením. Nemusíte hned volat profesionály (i když rádi
+                přijedeme) – tady je seznam, který vám pomůže zvládnout to
+                svépomocí, nebo si aspoň ujasnit, co všechno taková podzimní
+                očista obnáší.
+              </p>
+            </header>
+
+            <div class="tips-feature-image tips-feature-image--windows">
+              <img
+                src="assets/services/4.png"
+                alt="Mytí oken během podzimního úklidu"
+              />
+              <span>01 / SVĚTLO A ČERSTVÝ VZDUCH</span>
+            </div>
+
+            <section class="tips-article__block">
+              <span class="tips-article__number">01</span>
+              <div>
+                <h2>Okna, rámy a záclony</h2>
+                <p>
+                  Nevěřili byste, kolik prachu dokáže zachytit obyčejná záclona
+                  – často víc než koberec. Okna myjte za teplejšího dne, ne v
+                  mrazu, jinak vám voda na skle zamrzne dřív, než ji stihnete
+                  setřít. Záclony a závěsy sundejte a vyperte, rámy a parapety
+                  utřete vlhkým hadrem.
+                </p>
+              </div>
+            </section>
+
+            <section class="tips-article__block">
+              <span class="tips-article__number">02</span>
+              <div>
+                <h2>Koberce a čalouněný nábytek</h2>
+                <p>
+                  Přes léto se v kobercích a na sedačkách nastřádá prach, chlupy
+                  a alergeny, které si přes zimu, kdy jsou okna zavřená, budete
+                  akorát dýchat. Vysajte důkladně z obou stran, a pokud je
+                  koberec nebo sedačka déle nečištěná, zvažte chemické čištění –
+                  doma se roztočů a starých skvrn úplně nezbavíte.
+                </p>
+              </div>
+            </section>
+
+            <div class="tips-feature-image tips-feature-image--upholstery">
+              <img
+                src="assets/services/5.png"
+                alt="Chemické čištění čalouněného nábytku"
+              />
+              <span>02 / HLOUBKOVÁ PÉČE</span>
+            </div>
+
+            <section class="tips-article__block">
+              <span class="tips-article__number">03</span>
+              <div>
+                <h2>Matrace</h2>
+                <p>
+                  Otočte matraci na druhou stranu, pořádně ji vyvětrejte a
+                  vysajte. Matrace, na které spíte 8 hodin denně, si tuhle
+                  pozornost jednou za sezónu zaslouží – zvlášť pokud v
+                  domácnosti někdo trpí alergiemi.
+                </p>
+              </div>
+            </section>
+
+            <section class="tips-article__block">
+              <span class="tips-article__number">04</span>
+              <div>
+                <h2>Skříně a šatník</h2>
+                <p>
+                  Ideální moment probrat skříň a oddělit léto od zimy. Co jste
+                  za celý rok neoblékli, pravděpodobně neoblečete ani příští
+                  rok.
+                </p>
+              </div>
+            </section>
+
+            <section class="tips-checklist">
+              <div class="tips-checklist__head">
+                <span>Nezapomenout</span>
+                <strong>Malé detaily, velký rozdíl.</strong>
+              </div>
+
+              <div class="tips-checklist__grid">
+                <span>Vypínače</span>
+                <span>Kliky</span>
+                <span>Horní hrana dveří</span>
+                <span>Radiátory</span>
+              </div>
+            </section>
+
+            <section class="tips-article__block">
+              <span class="tips-article__number">05</span>
+              <div>
+                <h2>Detaily, na které se zapomíná</h2>
+                <p>
+                  Vypínače, kliky, horní hrana dveří, radiátory – místa, která
+                  při běžném úklidu snadno unikají pozornosti, ale prach se na
+                  nich drží stejně poctivě jako všude jinde.
+                </p>
+              </div>
+            </section>
+
+            <section class="tips-article__block">
+              <span class="tips-article__number">06</span>
+              <div>
+                <h2>Kuchyň a koupelna</h2>
+                <p>
+                  Fronty kuchyňské linky, spodní strana spotřebičů, spáry mezi
+                  obklady – podzim je dobrý čas projít i tohle, ne jen to, co je
+                  vidět na první pohled.
+                </p>
+              </div>
+            </section>
+
+            <section class="tips-cta">
+              <span class="tips-cta__eyebrow">Raději to nechat na nás?</span>
+              <h2>Podzimní generální úklid můžeme vyřešit za vás.</h2>
+              <p>
+                Pokud vás při čtení tohohle seznamu spíš přepadla únava než
+                nadšení, rozumíme – proto tu jsme. Napište nám a generální úklid
+                vyřešíme za vás, ať už jste v Chlumci nad Cidlinou, Hradci
+                Králové, Pardubicích nebo kdekoliv v okolí.
+              </p>
+
+              <a
+                class="btn btn--primary tips-cta__button"
+                href="https://wa.me/420736751437?text=Dobr%C3%BD%20den%2C%20m%C3%A1m%20z%C3%A1jem%20o%20gener%C3%A1ln%C3%AD%20%C3%BAklid."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>Nezávazná poptávka</span>
+                <span aria-hidden="true">↗</span>
+              </a>
+            </section>
+
+            <section class="tips-social">
+              <div>
+                <span class="tips-social__eyebrow">Jsme i na sítích</span>
+                <h2>Sledujte nás na Facebooku a Instagramu</h2>
+              </div>
+
+              <div class="tips-social__links">
+                <a
+                  class="tips-social__link"
+                  href="https://www.instagram.com/davama_uklid?igsi=MzdkcnVzdm9xa2dv"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="DAVAMA na Instagramu"
+                >
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <rect
+                      x="3.25"
+                      y="3.25"
+                      width="17.5"
+                      height="17.5"
+                      rx="5"
+                    ></rect>
+                    <circle cx="12" cy="12" r="4.1"></circle>
+                    <circle cx="17.4" cy="6.7" r="1"></circle>
+                  </svg>
+                  <span>Instagram</span>
+                  <i>↗</i>
+                </a>
+
+                <a
+                  class="tips-social__link"
+                  href="https://www.facebook.com/share/1BfjXcPfop/?mibextid=wwXIfr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="DAVAMA na Facebooku"
+                >
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M14.2 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.5 1.6-1.5h1.7V3.9c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3V10H8v3h2.8v8h3.4Z"
+                    ></path>
+                  </svg>
+                  <span>Facebook</span>
+                  <i>↗</i>
+                </a>
+              </div>
+            </section>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <a
+      class="whatsapp-bubble"
+      href="https://wa.me/420736751437"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Napsat nám na WhatsApp"
+    >
+      <span class="whatsapp-bubble__particles" aria-hidden="true">
+        <i class="whatsapp-bubble__small whatsapp-bubble__small--1"></i>
+        <i class="whatsapp-bubble__small whatsapp-bubble__small--2"></i>
+        <i class="whatsapp-bubble__small whatsapp-bubble__small--3"></i>
+        <i class="whatsapp-bubble__small whatsapp-bubble__small--4"></i>
+        <i class="whatsapp-bubble__small whatsapp-bubble__small--5"></i>
+        <i class="whatsapp-bubble__small whatsapp-bubble__small--6"></i>
+        <i class="whatsapp-bubble__small whatsapp-bubble__small--7"></i>
+        <i class="whatsapp-bubble__small whatsapp-bubble__small--8"></i>
+      </span>
+
+      <span class="whatsapp-bubble__core">
+        <span class="whatsapp-bubble__shine" aria-hidden="true"></span>
+
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M12 2.1a9.65 9.65 0 0 0-8.26 14.65L2.5 21.5l4.86-1.27A9.7 9.7 0 1 0 12 2.1Zm0 17.54a7.9 7.9 0 0 1-4.03-1.1l-.29-.17-2.88.75.77-2.8-.19-.3A7.92 7.92 0 1 1 12 19.64Zm4.34-5.91c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.92-1.19-.71-.63-1.19-1.41-1.33-1.65-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.19-.46-.39-.4-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.69 2.58 4.1 3.62.57.25 1.02.4 1.37.51.58.18 1.1.16 1.51.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28Z"
+          ></path>
+        </svg>
+      </span>
+    </a>
+    <footer class="site-footer">
+      <!-- decorative bubble -->
+      <span class="site-footer__bubble" aria-hidden="true"></span>
+
+      <div class="container">
+        <div class="site-footer__main">
+          <!-- LOGO -->
+          <div class="site-footer__brand">
+            <a href="/" class="site-footer__logo" aria-label="DAVAMA">
+              <img src="assets/logo.png" alt="DAVAMA" />
+            </a>
+
+            <span class="site-footer__brand-text"> ÚKLIDOVÉ SLUŽBY </span>
+          </div>
+
+          <!-- LINKS -->
+          <div class="site-footer__pages">
+            <nav class="site-footer__nav">
+              <a href="obchodni-podminky.html" class="site-footer__link">
+                <span>Obchodní podmínky</span>
+                <span class="site-footer__arrow">↗</span>
+              </a>
+
+              <a href="ochrana-osobnich-udaju.html" class="site-footer__link">
+                <span>Ochrana osobních údajů</span>
+                <span class="site-footer__arrow">↗</span>
+              </a>
+
+              <a href="zasady-cookies.html" class="site-footer__link">
+                <span>Zásady cookies</span>
+                <span class="site-footer__arrow">↗</span>
+              </a>
+            </nav>
+          </div>
+        </div>
+
+        <!-- BOTTOM -->
+        <div class="site-footer__bottom">
+          <div class="site-footer__safe">
+            <span class="site-footer__check">✓</span>
+
+            <div>
+              <strong>VAŠE ÚDAJE JSOU V BEZPEČÍ.</strong>
+              <span>Zpracováváme je v souladu s GDPR.</span>
+            </div>
+          </div>
+
+          <!-- SOCIAL ICONS -->
+          <div class="site-footer__social-icons">
+            <!-- Instagram -->
+            <a
+              href="https://www.instagram.com/davama_uklid?igsi=MzdkcnVzdm9xa2dv"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram DAVAMA"
+              class="site-footer__social-icon"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                <circle cx="12" cy="12" r="4"></circle>
+                <circle cx="17.4" cy="6.6" r="1"></circle>
+              </svg>
+            </a>
+
+            <!-- Facebook -->
+            <a
+              href="https://www.facebook.com/share/1BfjXcPfop/?mibextid=wwXIfr"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook DAVAMA"
+              class="site-footer__social-icon"
+            >
+              <svg class="facebook-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M13.5 21v-8h2.8l.4-3h-3.2V8.1c0-.9.3-1.6 1.7-1.6H17V3.8c-.3 0-1.4-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2H7.5v3h2.8v8h3.2Z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+
+          <div class="site-footer__copy">
+            <span>© 2026 DAVAMA</span>
+            <span>Všechna práva vyhrazena.</span>
+
+            <button
+              type="button"
+              class="cookie-footer-button"
+              data-cookie-footer-settings
+            >
+              <span class="cookie-footer-button__dot" aria-hidden="true"></span>
+              Nastavení cookies
+            </button>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>

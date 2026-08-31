@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Obchodní podmínky | DAVAMA</title>
+    <meta name="description" content="Obchodní podmínky DAVAMA." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <div class="container nav__inner">
+        <!-- LOGO -->
+        <a class="nav__logo" href="index.html" aria-label="DAVAMA – domů">
+          <img
+            src="assets/logo.png"
+            alt="DAVAMA Úklidové služby"
+            width="210"
+            height="53"
+          />
+        </a>
+
+        <!-- DESKTOP NAV -->
+        <nav class="nav nav--desktop" aria-label="Hlavní navigace">
+          <!-- DOMŮ -->
+          <a class="nav__link" href="index.html"> Domů </a>
+
+          <!-- SLUŽBY -->
+          <div class="nav__item nav__item--dropdown">
+            <button
+              class="nav__link nav__link--button"
+              type="button"
+              aria-expanded="false"
+              aria-controls="services-menu"
+            >
+              Služby
+
+              <span class="nav__chevron" aria-hidden="true"></span>
+            </button>
+
+            <div class="dropdown" id="services-menu" role="menu">
+              <a role="menuitem" href="generalni-uklid.html">
+                Generální úklid
+              </a>
+
+              <a role="menuitem" href="pravidelny-uklid.html">
+                Pravidelný úklid
+              </a>
+
+              <a role="menuitem" href="postavebni-uklid.html">
+                Postavební úklid
+              </a>
+
+              <a role="menuitem" href="myti-oken.html"> Mytí oken </a>
+
+              <a role="menuitem" href="chemicke-cisteni.html">
+                Chemické čištění
+              </a>
+
+              <a role="menuitem" href="dalsi-sluzby.html"> Doplňkové služby </a>
+            </div>
+          </div>
+
+          <!-- GALERIE -->
+          <div class="nav__item nav__item--dropdown">
+            <button
+              class="nav__link nav__link--button"
+              type="button"
+              aria-expanded="false"
+              aria-controls="gallery-menu"
+            >
+              Galerie
+
+              <span class="nav__chevron" aria-hidden="true"></span>
+            </button>
+
+            <div
+              class="dropdown dropdown--compact"
+              id="gallery-menu"
+              role="menu"
+            >
+              <a role="menuitem" href="pred-po.html"> Před / Po </a>
+            </div>
+          </div>
+
+          <!-- O NÁS -->
+          <!-- O NÁS / INFORMACE -->
+          <div class="nav__item nav__item--dropdown">
+            <button
+              class="nav__link nav__link--button"
+              type="button"
+              aria-expanded="false"
+              aria-controls="about-menu"
+            >
+              O nás
+
+              <span class="nav__chevron" aria-hidden="true"></span>
+            </button>
+
+            <div class="dropdown dropdown--compact" id="about-menu" role="menu">
+              <a role="menuitem" href="o-nas.html"> O nás </a>
+
+              <a role="menuitem" href="pro-firmy.html"> Pro firmy </a>
+
+              <a role="menuitem" href="rady-a-tipy.html"> Rady a tipy </a>
+            </div>
+          </div>
+
+          <!-- CENÍK -->
+          <a class="nav__link" href="cenik.html"> Ceník </a>
+
+          <!-- KONTAKT -->
+          <a class="nav__link" href="kontakt.html"> Kontakt </a>
+        </nav>
+
+        <!-- MAIN CTA -->
+        <a
+          class="btn btn--primary nav__cta"
+          href="https://wa.me/420736751437?text=Dobr%C3%BD%20den%2C%20m%C3%A1m%20z%C3%A1jem%20o%20%C3%BAklidov%C3%A9%20slu%C5%BEby."
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Poptat úklid přes WhatsApp"
+        >
+          <span>Nezávazná poptávka</span>
+
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M12 2.1a9.65 9.65 0 0 0-8.26 14.65L2.5 21.5l4.86-1.27A9.7 9.7 0 1 0 12 2.1Zm0 17.54a7.9 7.9 0 0 1-4.03-1.1l-.29-.17-2.88.75.77-2.8-.19-.3A7.92 7.92 0 1 1 12 19.64Zm4.34-5.91c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.92-1.19-.71-.63-1.19-1.41-1.33-1.65-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.19-.46-.39-.4-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.69 2.58 4.1 3.62.57.25 1.02.4 1.37.51.58.18 1.1.16 1.51.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28Z"
+            />
+          </svg>
+        </a>
+
+        <!-- MOBILE BURGER -->
+        <button
+          class="burger"
+          type="button"
+          aria-label="Otevřít menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          data-menu-toggle
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <div
+      class="mobile-nav"
+      id="mobile-menu"
+      aria-hidden="true"
+      data-mobile-menu
+    >
+      <div class="mobile-nav__decor" aria-hidden="true">
+        <span class="bubble bubble--1"></span>
+        <span class="bubble bubble--2"></span>
+        <span class="bubble bubble--3"></span>
+        <span class="bubble bubble--4"></span>
+      </div>
+
+      <div class="mobile-nav__top container">
+        <a
+          class="mobile-nav__logo"
+          href="index.html"
+          aria-label="DAVAMA – domů"
+        >
+          <img
+            src="assets/logo.png"
+            alt="DAVAMA Úklidové služby"
+            width="210"
+            height="53"
+          />
+        </a>
+
+        <button
+          class="burger burger--overlay"
+          type="button"
+          aria-label="Zavřít menu"
+          aria-expanded="true"
+          aria-controls="mobile-menu"
+          data-menu-close
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+      <nav class="mobile-nav__content container" aria-label="Mobilní navigace">
+        <a class="mobile-nav__link" href="index.html"> Domů </a>
+
+        <details class="mobile-nav__group">
+          <summary class="mobile-nav__link">
+            Služby
+            <i class="mobile-nav__arrow" aria-hidden="true"></i>
+          </summary>
+
+          <div class="mobile-nav__submenu">
+            <a href="generalni-uklid.html"> Generální úklid </a>
+
+            <a href="pravidelny-uklid.html"> Pravidelný úklid </a>
+
+            <a href="postavebni-uklid.html"> Postavební úklid </a>
+
+            <a href="myti-oken.html"> Mytí oken </a>
+
+            <a href="chemicke-cisteni.html"> Chemické čištění </a>
+
+            <a href="dalsi-sluzby.html"> Doplňkové služby </a>
+          </div>
+        </details>
+
+        <details class="mobile-nav__group">
+          <summary class="mobile-nav__link">
+            Galerie
+            <i class="mobile-nav__arrow" aria-hidden="true"></i>
+          </summary>
+
+          <div class="mobile-nav__submenu">
+            <a href="pred-po.html"> Před / Po </a>
+          </div>
+        </details>
+
+        <!-- O NÁS -->
+        <details class="mobile-nav__group">
+          <summary class="mobile-nav__link">
+            O nás
+            <i class="mobile-nav__arrow" aria-hidden="true"></i>
+          </summary>
+
+          <div class="mobile-nav__submenu">
+            <a href="o-nas.html"> O nás </a>
+
+            <a href="pro-firmy.html"> Pro firmy </a>
+
+            <a href="rady-a-tipy.html"> Rady a tipy </a>
+          </div>
+        </details>
+
+        <a class="mobile-nav__link" href="cenik.html"> Ceník </a>
+
+        <a class="mobile-nav__link" href="kontakt.html"> Kontakt </a>
+
+        <a
+          class="btn btn--primary nav__cta"
+          href="https://wa.me/420736751437?text=Dobr%C3%BD%20den%2C%20m%C3%A1m%20z%C3%A1jem%20o%20%C3%BAklidov%C3%A9%20slu%C5%BEby."
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Poptat úklid přes WhatsApp"
+        >
+          <span>Nezávazná poptávka</span>
+
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M12 2.1a9.65 9.65 0 0 0-8.26 14.65L2.5 21.5l4.86-1.27A9.7 9.7 0 1 0 12 2.1Zm0 17.54a7.9 7.9 0 0 1-4.03-1.1l-.29-.17-2.88.75.77-2.8-.19-.3A7.92 7.92 0 1 1 12 19.64Zm4.34-5.91c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.92-1.19-.71-.63-1.19-1.41-1.33-1.65-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.19-.46-.39-.4-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.69 2.58 4.1 3.62.57.25 1.02.4 1.37.51.58.18 1.1.16 1.51.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28Z"
+            ></path>
+          </svg>
+        </a>
+      </nav>
+    </div>
+
+    <main class="legal-page">
+      <section class="legal-hero">
+        <div class="legal-orb legal-orb--one" aria-hidden="true"></div>
+        <div class="legal-orb legal-orb--two" aria-hidden="true"></div>
+        <div class="container legal-hero__inner">
+          <span class="legal-kicker">DAVAMA</span>
+          <h1>Obchodní podmínky</h1>
+        </div>
+      </section>
+      <section class="legal-content">
+        <div class="container">
+          <article class="legal-card">
+            <p class="legal-lead">
+              Těchto obchodních podmínek (dále jen „podmínky") upravuje vzájemná
+              práva a povinnosti při poskytování úklidových a čisticích služeb
+              (dále jen „služby") mezi poskytovatelem a klientem.
+            </p>
+            <h2>I. Poskytovatel</h2>
+            <ul class="legal-list">
+              <li>Vasyl Dankovych, IČO: 22204253</li>
+              <li>Místo podnikání: Chlumec nad Cidlinou</li>
+              <li>E-mail: davama_uklid@seznam.cz</li>
+              <li>Telefon: +420 736 751 437, +420 734 753 240</li>
+            </ul>
+            <p>Poskytovatel není plátcem DPH.</p>
+            <h2>II. Uzavření smlouvy</h2>
+            <ol class="legal-list legal-list--numbered">
+              <li>
+                1. Klient projeví zájem o službu prostřednictvím poptávkového
+                formuláře na webu, telefonicky, e-mailem nebo přes sociální
+                sítě.
+              </li>
+              <li>
+                2. Poskytovatel na základě poptávky navrhne klientovi rozsah,
+                termín a cenu služby.
+              </li>
+              <li>
+                3. Smlouva je uzavřena okamžikem, kdy klient potvrdí navržený
+                rozsah, termín a cenu (telefonicky, e-mailem, SMS nebo jiným
+                prokazatelným způsobem).
+              </li>
+              <li>
+                4. Ceny uvedené na webu jsou orientační. Konečná cena se odvíjí
+                od rozsahu a stavu prostoru a je klientovi sdělena před závazným
+                potvrzením termínu.
+              </li>
+            </ol>
+            <h2>III. Cena a platební podmínky</h2>
+            <ol class="legal-list legal-list--numbered">
+              <li>
+                1. Cena se řídí aktuálním ceníkem poskytovatele nebo
+                individuální nabídkou.
+              </li>
+              <li>
+                2. Platbu lze provést v hotovosti, kartou nebo bankovním
+                převodem.
+              </li>
+              <li>
+                3. Doprava nad 10 km od Chlumce nad Cidlinou je zpoplatněna
+                částkou 15 Kč/km.
+              </li>
+            </ol>
+            <h2>IV. Práva a povinnosti stran</h2>
+            <ol class="legal-list legal-list--numbered">
+              <li>
+                1. Poskytovatel provede službu s odbornou péčí, v dohodnutém
+                rozsahu a termínu.
+              </li>
+              <li>
+                2. Klient zajistí přístup do prostoru realizace služby a předem
+                informuje poskytovatele o zvláštních požadavcích (např. citlivé
+                povrchy, alergie).
+              </li>
+              <li>
+                3. Termín mimo obvyklou pracovní dobu může být zohledněn v ceně.
+              </li>
+            </ol>
+            <h2>V. Reklamace a garance spokojenosti</h2>
+            <ol class="legal-list legal-list--numbered">
+              <li>
+                1. Není-li klient s výsledkem služby spokojen, kontaktuje
+                poskytovatele bez zbytečného odkladu, nejlépe do 24 hodin od
+                provedení služby.
+              </li>
+              <li>
+                2. Poskytovatel v takovém případě bezplatně odstraní oprávněně
+                vytčené nedostatky v přiměřené lhůtě.
+              </li>
+            </ol>
+            <h2>VI. Zrušení nebo přeložení termínu</h2>
+            <ol class="legal-list legal-list--numbered">
+              <li>
+                1. Klient může domluvený termín zrušit nebo přeložit bez sankce,
+                ideálně s předstihem alespoň 24 hodin, aby jej poskytovatel mohl
+                obsadit jinak.
+              </li>
+              <li>
+                2. Opakované rušení termínů na poslední chvíli řeší poskytovatel
+                individuálně.
+              </li>
+            </ol>
+            <h2>VII. Odstoupení od smlouvy (pro spotřebitele)</h2>
+            <ol class="legal-list legal-list--numbered">
+              <li>
+                1. Je-li klient spotřebitelem a smlouva byla uzavřena distančním
+                způsobem (přes web, telefon nebo e-mail, bez současné fyzické
+                přítomnosti stran), má právo od smlouvy odstoupit bez udání
+                důvodu do 14 dnů od jejího uzavření (§ 1829 a násl. občanského
+                zákoníku).
+              </li>
+              <li>
+                2. Požádá-li klient výslovně, aby poskytování služby začalo
+                ještě před uplynutím této lhůty, a poskytovatel jej předem
+                poučil, že tím právo na odstoupení po úplném poskytnutí služby
+                zaniká, nemůže klient po úplném poskytnutí služby od smlouvy
+                odstoupit.
+              </li>
+              <li>
+                3. Bylo-li plnění poskytnuto pouze zčásti, náleží poskytovateli
+                poměrná část sjednané ceny.
+              </li>
+              <li>
+                4. Odstoupení lze uplatnit e-mailem na davama_uklid@seznam.cz,
+                telefonicky, písemně na adrese poskytovatele nebo
+                prostřednictvím vzorového formuláře v příloze těchto podmínek.
+              </li>
+              <li>
+                5. V případě platného odstoupení vrátí poskytovatel klientovi
+                přijaté platby bez zbytečného odkladu, nejpozději do 14 dnů od
+                doručení odstoupení.
+              </li>
+            </ol>
+            <h2>VIII. Ochrana osobních údajů</h2>
+            <p>
+              Zpracování osobních údajů klientů se řídí samostatným dokumentem
+              Ochrana osobních údajů, dostupným na webu poskytovatele.
+            </p>
+            <h2>IX. Závěrečná ustanovení</h2>
+            <ol class="legal-list legal-list--numbered">
+              <li>
+                1. Tyto podmínky a vztahy jimi neupravené se řídí právním řádem
+                České republiky, zejména zákonem č. 89/2012 Sb., občanský
+                zákoník, a je-li klient spotřebitelem, zákonem č. 634/1992 Sb.,
+                o ochraně spotřebitele.
+              </li>
+              <li>
+                2. K mimosoudnímu řešení spotřebitelských sporů je příslušná
+                Česká obchodní inspekce (www.coi.cz).
+              </li>
+              <li>
+                3. Tyto obchodní podmínky nabývají účinnosti dne 1. září 2026
+              </li>
+            </ol>
+            <div class="legal-appendix">
+              <h2>Příloha — vzorový formulář pro odstoupení od smlouvy</h2>
+              <p>
+                (Vyplňte a odešlete tento formulář pouze v případě, že chcete
+                odstoupit od smlouvy.)
+              </p>
+              <ul class="legal-list">
+                <li>
+                  Adresát: Vasyl Dankovych, IČO 22204253, Chlumec nad Cidlinou,
+                  e-mail: davama_uklid@seznam.cz
+                </li>
+                <li>
+                  Oznamuji, že tímto odstupuji od smlouvy o poskytnutí této
+                  služby: (doplní spotřebitel)
+                </li>
+                <li>
+                  Datum objednání / datum poskytnutí služby: (doplní
+                  spotřebitel)
+                </li>
+                <li>Jméno a příjmení spotřebitele: (doplní spotřebitel)</li>
+                <li>Adresa spotřebitele: (doplní spotřebitel)</li>
+                <li>
+                  Podpis spotřebitele (pouze u listinné podoby): (doplní
+                  spotřebitel)
+                </li>
+                <li>Datum: (doplní spotřebitel)</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <!-- decorative bubble -->
+      <span class="site-footer__bubble" aria-hidden="true"></span>
+
+      <div class="container">
+        <div class="site-footer__main">
+          <!-- LOGO -->
+          <div class="site-footer__brand">
+            <a href="/" class="site-footer__logo" aria-label="DAVAMA">
+              <img src="assets/logo.png" alt="DAVAMA" />
+            </a>
+
+            <span class="site-footer__brand-text"> ÚKLIDOVÉ SLUŽBY </span>
+          </div>
+
+          <!-- LINKS -->
+          <div class="site-footer__pages">
+            <nav class="site-footer__nav">
+              <a href="obchodni-podminky.html" class="site-footer__link">
+                <span>Obchodní podmínky</span>
+                <span class="site-footer__arrow">↗</span>
+              </a>
+
+              <a href="ochrana-osobnich-udaju.html" class="site-footer__link">
+                <span>Ochrana osobních údajů</span>
+                <span class="site-footer__arrow">↗</span>
+              </a>
+
+              <a href="zasady-cookies.html" class="site-footer__link">
+                <span>Zásady cookies</span>
+                <span class="site-footer__arrow">↗</span>
+              </a>
+            </nav>
+          </div>
+        </div>
+
+        <!-- BOTTOM -->
+        <div class="site-footer__bottom">
+          <div class="site-footer__safe">
+            <span class="site-footer__check">✓</span>
+
+            <div>
+              <strong>VAŠE ÚDAJE JSOU V BEZPEČÍ.</strong>
+              <span>Zpracováváme je v souladu s GDPR.</span>
+            </div>
+          </div>
+
+          <!-- SOCIAL ICONS -->
+          <div class="site-footer__social-icons">
+            <!-- Instagram -->
+            <a
+              href="https://www.instagram.com/davama_uklid?igsi=MzdkcnVzdm9xa2dv"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram DAVAMA"
+              class="site-footer__social-icon"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                <circle cx="12" cy="12" r="4"></circle>
+                <circle cx="17.4" cy="6.6" r="1"></circle>
+              </svg>
+            </a>
+
+            <!-- Facebook -->
+            <a
+              href="https://www.facebook.com/share/1BfjXcPfop/?mibextid=wwXIfr"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook DAVAMA"
+              class="site-footer__social-icon"
+            >
+              <svg class="facebook-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M13.5 21v-8h2.8l.4-3h-3.2V8.1c0-.9.3-1.6 1.7-1.6H17V3.8c-.3 0-1.4-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2H7.5v3h2.8v8h3.2Z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+
+          <div class="site-footer__copy">
+            <span>© 2026 DAVAMA</span>
+            <span>Všechna práva vyhrazena.</span>
+
+            <button
+              type="button"
+              class="cookie-footer-button"
+              data-cookie-footer-settings
+            >
+              <span class="cookie-footer-button__dot" aria-hidden="true"></span>
+              Nastavení cookies
+            </button>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
