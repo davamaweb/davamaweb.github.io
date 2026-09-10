@@ -10148,8 +10148,8 @@ button {
 /* location pulse */
 .contact-map__pin {
   position: absolute;
-  left: 70%;
-  top: 47%;
+  left: 50%;
+  top: 50%;
   z-index: 4;
   width: 120px;
   height: 120px;
@@ -12804,7 +12804,9 @@ body.cookie-modal-open {
 
 @media (max-width: 700px) {
   .site-footer__social-icons {
-    gap: 8px;
+    gap: 15px;
+    margin-top: 20px;
+    justify-content: center;
   }
 
   .site-footer__social-icon {
@@ -12815,5 +12817,90 @@ body.cookie-modal-open {
   .site-footer__social-icon svg {
     width: 17px;
     height: 17px;
+  }
+}
+
+/* =========================================================
+   CONTACT MAP — FINAL OVERRIDE
+   ВСТАВИТИ В САМИЙ КІНЕЦЬ styles.css
+   ========================================================= */
+
+/* ---------- DESKTOP ---------- */
+
+.contact-map__canvas {
+  transform: none !important;
+  translate: none !important;
+}
+
+.contact-map__iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.contact-map__pin {
+  left: 57% !important;
+  top: 40% !important;
+
+  margin-left: 0 !important;
+  margin-top: 0 !important;
+
+  transform: translate(-50%, -50%);
+}
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 767px) {
+  .contact-map {
+    /*
+      Змінюй ТІЛЬКИ це число,
+      якщо карту треба ще нижче / вище.
+    */
+    --mobile-map-shift: 160px;
+  }
+
+  /*
+    Збільшуємо карту по вертикалі,
+    щоб при зміщенні не було порожнього місця.
+  */
+  .contact-map__canvas {
+    top: -250px !important;
+    bottom: auto !important;
+
+    width: 100% !important;
+    height: calc(100% + 500px) !important;
+
+    transform: translateY(var(--mobile-map-shift)) !important;
+    translate: none !important;
+  }
+
+  .contact-map__iframe {
+    position: absolute !important;
+    inset: 0 !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    transform: none !important;
+  }
+
+  /*
+    PIN рухається на ТОЧНО таку саму відстань,
+    як і центр карти.
+  */
+  .contact-map__pin {
+    left: 72% !important;
+    top: calc(41% + var(--mobile-map-shift)) !important;
+
+    margin: 0 !important;
+
+    transform: translate(-50%, -50%) scale(0.82) !important;
+  }
+}
+
+/* ---------- VERY SMALL MOBILE ---------- */
+
+@media (max-width: 480px) {
+  .contact-map {
+    --mobile-map-shift: 460px;
   }
 }
