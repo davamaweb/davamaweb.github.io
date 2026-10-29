@@ -787,9 +787,9 @@ function initTelegramForm() {
      TELEGRAM SETTINGS
   ======================================================= */
 
-  const BOT_TOKEN = "SEM_VLOZ_SVUJ_BOT_TOKEN";
+  const BOT_TOKEN = "9060190113:AAF_G2Bi9E9fKhYlPudeyXRecYfBc44hwrE";
 
-  const CHAT_ID = "SEM_VLOZ_CHAT_ID";
+  const CHAT_ID = "8052580762";
 
   const TELEGRAM_API = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
 
